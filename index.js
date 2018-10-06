@@ -23,5 +23,7 @@ app.get('*', (req,res) =>{
 });
 
 app.listen(8080, "10.136.132.80");
+// app.listen(8080, "192.168.0.100");
+// app.listen(5000);
 
 console.log('App is listening');
