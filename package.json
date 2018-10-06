@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/taymosier/psa/issues"
   },
-  "homepage": "https://github.com/taymosier/psa#readme",
   "dependencies": {
     "express": "^4.16.3"
   }
