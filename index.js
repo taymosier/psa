@@ -18,7 +18,6 @@ app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
-const port = process.env.PORT || 8080;
-app.listen(port);
+app.listen(8080, "10.136.132.80");
 
-console.log('App is listening on port ' + port);
+console.log('App is listening');
