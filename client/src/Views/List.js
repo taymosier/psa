@@ -23,7 +23,10 @@ class List extends Component {
 
   // Retrieves the list of items from the Express app
   getList = () => {
-    fetch("/api/getList")
+    fetch("/api/getList", {
+      method: "GET",
+      headers: {"Content-Type": "application/json"}
+    })
     .then(handleErrors)
     .then(res => res.json())
     .then(handleErrors)
