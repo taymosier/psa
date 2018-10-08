@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "taylormosier.com",
+  "homepage": "https://taylormosier.com",
   "dependencies": {
     "body-parser": "^1.18.3",
     "morgan": "^1.9.1",
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "refresh": "npm run build && pm2 restart index --update-env && service nginx -t",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build/static')));
 
 // An api endpoint that returns a short list of items
 app.get('/api/getList', (req,res) => {
