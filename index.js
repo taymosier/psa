@@ -26,8 +26,8 @@ app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
-app.listen(8080, "10.136.132.80");
+// app.listen(8080, "10.136.132.80");
 // app.listen(8080, "192.168.0.100");
-// app.listen(5000);
+app.listen(8080);
 
 console.log('App is listening');
