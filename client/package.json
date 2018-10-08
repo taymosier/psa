@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "refresh": "npm run build && pm2 restart index --update-env && service nginx -t",
+    "refresh": "npm run build && pm2 restart index --update-env && service nginx restart",
+    "nxconf": "nano /etc/nginx/sites-available/default",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
