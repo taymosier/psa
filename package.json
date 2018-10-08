@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "openlist": "nano client/src/Views/List.js",
+    "openlist": "nano client/src/Views/List.js"
   },
   "repository": {
     "type": "git",
