@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 var logger = require('morgan');
+var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
@@ -8,8 +9,9 @@ const app = express();
 
 // Serve the static files from the React app
 app.use(logger('dev'));
+app.use(cors());
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'client/build/static')));
