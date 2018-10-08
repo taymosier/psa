@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "taylormosier.com",
   "dependencies": {
     "body-parser": "^1.18.3",
     "morgan": "^1.9.1",
@@ -17,5 +17,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://10.136.132.80:8080"
+  "proxy": "http://localhost:8080"
 }
