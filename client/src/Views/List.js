@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-function handleErrors(response){
-  if(!response.ok){
-    throw Error(response.statusText);
-  }
-  return response;
-}
+// function handleErrors(response){
+//   if(!response.ok){
+//     throw Error(response.statusText);
+//   }
+//   return response;
+// }
 
 class List extends Component {
   // Initialize the state
@@ -24,7 +24,6 @@ class List extends Component {
   // Retrieves the list of items from the Express app
   getList = () => {
     fetch("/api/getlist")
-    .then(handleErrors(res))
     .then(res => res.json())
     .then(list => this.setState({ list }))
   }
