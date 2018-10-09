@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build/static')));
 
 // An api endpoint that returns a short list of items
-app.get('/api/test', (req,res) => {
+app.get('/api/getlist', (req,res) => {
     var list = ["item1", "item2", "item3"];
     res.json(list);
     console.log('Sent list of items');
