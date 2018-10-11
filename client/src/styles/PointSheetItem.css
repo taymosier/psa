@@ -1,0 +1,9 @@
+label {
+  padding-top: 20px;
+  float: left;
+}
+
+.row {
+  border: 2px solid black;
+  padding: 5px 0 5px 0;
+}
