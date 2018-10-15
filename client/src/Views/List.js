@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 
-// function handleErrors(response){
-//   if(!response.ok){
-//     throw Error(response.statusText);
-//   }
-//   return response;
-// }
-
 class List extends Component {
   // Initialize the state
   constructor(props){

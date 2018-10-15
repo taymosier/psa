@@ -13,12 +13,17 @@ class Home extends Component {
             My List
         </button>
       </Link>
-      <Link to={'./new'}>
+      {/* <Link to={'./new'}>
         <button variant="raised">
             New Point Sheet
         </button>
       </Link>
       <Link to={'./input'}>
+        <button variant="raised">
+           Point Sheet Input Page
+        </button>
+      </Link> */}
+      <Link to={'./point'}>
         <button variant="raised">
            Point Sheet Input Page
         </button>

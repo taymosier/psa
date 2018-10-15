@@ -4,14 +4,16 @@ export function handleEventNumberChange(e){
   this.setState({
     eventNumber: e.target.value,
   })
+  this.handleChange(e);
 }
 
-export function handleEventNameChange(e){
+export function handleEventDateChange(e){
   e.preventDefault();
   console.log(e);
   this.setState({
     eventName: e.target.value,
   })
+  this.handleChange(e);
 }
 
 export function handleBartendersChange(e){
@@ -19,7 +21,8 @@ export function handleBartendersChange(e){
   console.log(e);
   this.setState({
     bartenders: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleRoomChange(e){
@@ -27,7 +30,8 @@ export function handleRoomChange(e){
   console.log(e);
   this.setState({
     room: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleHostBarChange(e){
@@ -35,7 +39,8 @@ export function handleHostBarChange(e){
   console.log(e);
   this.setState({
     host: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleSalesTaxChange(e){
@@ -43,7 +48,8 @@ export function handleSalesTaxChange(e){
   console.log(e);
   this.setState({
     salesTax: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleServiceChargeChange(e){
@@ -51,7 +57,8 @@ export function handleServiceChargeChange(e){
   console.log(e);
   this.setState({
     serviceCharge: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleCallLiquorPriceChange(e){
@@ -59,7 +66,8 @@ export function handleCallLiquorPriceChange(e){
   console.log(e);
   this.setState({
     callLiquorPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 
@@ -68,7 +76,8 @@ export function handlePremiumLiquorPriceChange(e){
   console.log(e);
   this.setState({
     premiumLiquorPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleTopLiquorPriceChange(e){
@@ -76,7 +85,8 @@ export function handleTopLiquorPriceChange(e){
   console.log(e);
   this.setState({
     topLiquorPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleWellLiquorPriceChange(e){
@@ -84,7 +94,8 @@ export function handleWellLiquorPriceChange(e){
   console.log(e);
   this.setState({
     wellLiquorPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleChardonnayPriceChange(e){
@@ -92,7 +103,8 @@ export function handleChardonnayPriceChange(e){
   console.log(e);
   this.setState({
     chardonnayPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleMerlotPriceChange(e){
@@ -100,7 +112,8 @@ export function handleMerlotPriceChange(e){
   console.log(e);
   this.setState({
     merlotPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleCabernetSauvignonPriceChange(e){
@@ -108,7 +121,8 @@ export function handleCabernetSauvignonPriceChange(e){
   console.log(e);
   this.setState({
     cabernetSauvignonPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleWhiteZinfandelPriceChange(e){
@@ -116,7 +130,8 @@ export function handleWhiteZinfandelPriceChange(e){
   console.log(e);
   this.setState({
     cabernetSauvignonPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handlePinotGrigioPriceChange(e){
@@ -124,7 +139,8 @@ export function handlePinotGrigioPriceChange(e){
   console.log(e);
   this.setState({
     pinotGrigioPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleChampagnePriceChange(e){
@@ -132,7 +148,8 @@ export function handleChampagnePriceChange(e){
   console.log(e);
   this.setState({
     champagnePrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleDomesticBeerPriceChange(e){
@@ -140,7 +157,8 @@ export function handleDomesticBeerPriceChange(e){
   console.log(e);
   this.setState({
     domesticBeerPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
 
 export function handleImportBeerPriceChange(e){
@@ -148,5 +166,6 @@ export function handleImportBeerPriceChange(e){
   console.log(e);
   this.setState({
     importBeerPrice: e.target.value,
-  })
+  });
+  this.handleChange(e);
 }
