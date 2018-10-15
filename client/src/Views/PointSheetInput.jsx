@@ -62,7 +62,6 @@ export class PointSheetInput extends Component {
     // console.og(e.target.value)
     let state = this.state;
     state[`${e.target.name}`] = e.target.value
-    console.log(state)
     this.setState({state})
     this.props.handleInputChange(state)
   }
@@ -72,9 +71,9 @@ export class PointSheetInput extends Component {
       <Form>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 1}} xs={{ size: 6, offset: 1}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 1}} xs={{ size: 12, offset: 0}}>
               <Label>Event Number/Name</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 8}} xs={{ size: 9, offset: 11}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 8}} xs={{ size: 7, offset: 5}}>
                 <Input name="eventNumber" value={this.state.eventNumber} handleChange={this.handleChange} onChange={this.handleEventNumberChange}></Input>
               </Col>
             </Col>
@@ -83,7 +82,7 @@ export class PointSheetInput extends Component {
 
         {/* <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>Event Date</Label>
               <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
                 <Input name="eventDate" value={this.state.eventDate} onChange={this.handleEventDateChange} handleChange={this.handleChange}></Input>
@@ -94,9 +93,9 @@ export class PointSheetInput extends Component {
 
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>Bartenders</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 3}}>
                 <Input name="bartenders" value={this.state.bartenders} onChange={this.handleBartendersChange} handleChange={this.handleChange}></Input>
               </Col>
             </Col>
@@ -104,9 +103,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>Room</Label>
-                <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
+                <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 3}}>
                   <Input name="room" value={this.state.room} onChange={this.handleRoomChange} handleChange={this.handleChange}></Input>
                 </Col>
             </Col>
@@ -114,9 +113,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Host Bar (Y/N)</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 6, offset: 6}}>
                 <Input name="host" value={this.state.host} onChange={this.handleHostBarChange} handleChange={this.handleChange}></Input>
               </Col>
             </Col>
@@ -124,9 +123,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Sales Tax %</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 6, offset: 6}}>
                 <Input name="salesTax" value={this.state.salesTax} onChange={this.handleSalesTaxChange} handleChange={this.handleChange}></Input>
               </Col>
             </Col>
@@ -134,9 +133,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-          <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+          <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Service Charge %</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 6, offset: 6}}>
                 <Input name="serviceCharge" value={this.state.serviceCharge} onChange={this.handleServiceChargeChange} handleChange={this.handleChange}></Input>
               </Col>
             </Col>
@@ -144,9 +143,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-          <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+          <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Cash Collected</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 10, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="cashCollected" value={this.state.cashCollected}></Input>
               </Col>
             </Col>
@@ -154,7 +153,7 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl={{ size: 6, offset: 3}} lg={{ size: 6, offset: 3}} md="12" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 3}}>
+            <Col xl={{ size: 6, offset: 3}} lg={{ size: 6, offset: 3}} md="12" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>Prices (Including Tax)</Label>
             </Col>
           </Row>
@@ -162,9 +161,9 @@ export class PointSheetInput extends Component {
         <br/>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Call Liquor</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="callLiquorPrice" value={this.state.callLiquorPrice} handleChange={this.handleChange} onChange={this.handleCallLiquorPriceChange}></Input>
               </Col>
             </Col>
@@ -172,9 +171,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Premium Liquor</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="premiumLiquorPrice" value={this.state.premiumLiquorPrice} handleChange={this.handleChange} onChange={this.handlePremiumLiquorPriceChange}></Input>
               </Col>
             </Col>
@@ -182,9 +181,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Top Shelf Liquor</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="topLiquorPrice" value={this.state.topLiquorPrice} handleChange={this.handleChange} onChange={this.handleTopLiquorPriceChange}></Input>
               </Col>
             </Col>
@@ -192,9 +191,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Well Liquor</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="wellLiquorPrice" value={this.state.wellLiquorPrice} handleChange={this.handleChange} onChange={this.handleWellLiquorPriceChange}></Input>
               </Col>
             </Col>
@@ -202,9 +201,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Chardonnay</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="chardonnayPrice" value={this.state.chardonnayPrice} handleChange={this.handleChange} onChange={this.handleChardonnayPriceChange}e></Input>
               </Col>
             </Col>
@@ -212,9 +211,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Merlot</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="merlotPrice" value={this.state.merlotPrice} handleChange={this.handleChange} onChange={this.handleMerlotPriceChange}></Input>
               </Col>
             </Col>
@@ -222,9 +221,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Cabernet Sauvignon</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="cabernetSauvignonPrice" value={this.state.cabernetSauvignonPrice} handleChange={this.handleChange} onChange={this.handleCabernetSauvignonPriceChange}></Input>
               </Col>
             </Col>
@@ -232,9 +231,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Pinot Grigio</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="pinotGrigioPrice" value={this.state.pinotGrigioPrice} handleChange={this.handleChange} onChange={this.handlePinotGrigioPriceChange}></Input>
               </Col>
             </Col>
@@ -242,9 +241,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>White Zinfandel</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="whiteZinfandelPrice" value={this.state.whiteZinfandelPrice} handleChange={this.handleChange} onChange={this.handleWhiteZinfandelPriceChange}></Input>
               </Col>
             </Col>
@@ -252,9 +251,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label>Champagne</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="champagnePrice" value={this.state.champagnePrice} handleChange={this.handleChange} onChange={this.handleChampagnePriceChange}></Input>
               </Col>
             </Col>
@@ -262,9 +261,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>Domestic Beer</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="domesticBeerPrice" value={this.state.domesticBeerPrice} handleChange={this.handleChange} onChange={this.handleDomesticBeerPriceChange}></Input>
               </Col>
             </Col>
@@ -272,9 +271,9 @@ export class PointSheetInput extends Component {
         </FormGroup>
         <FormGroup>
           <Row>
-            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
               <Label>Imported Beer</Label>
-              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 5, offset: 9}}>
+              <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 7, offset: 5}}>
                 <Input name="importBeerPrice" value={this.state.importBeerPrice} handleChange={this.handleChange} onChange={this.handleImportBeerPriceChange}></Input>
               </Col>
             </Col>

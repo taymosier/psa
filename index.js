@@ -26,7 +26,6 @@ app.use(express.static(path.join(__dirname, 'client/build/static')));
 app.get('/api/getlist', (req,res) => {
     var list = ["item1", "item2", "item3"];
     res.json(list);
-    console.log('Sent list of items');
 });
 
 function logData(data){
@@ -38,10 +37,6 @@ function logData(data){
       data[1][i]['returned'] = 0;
     }
   }
-  // for(let i = 0; i<data.length; i++){
-  //   console.log(data[0][i]['name']+': ' + data[0][i]['issued'] + ' | ' + data[0][i]['returned'])
-  // }
-  // console.log(data[1])
   return data;
 }
 
@@ -55,15 +50,12 @@ function testSpawn(data){
     let newBuffer = Buffer.from(data)
     let jsonn = JSON.stringify(newBuffer)
     let original = Buffer.from(JSON.parse(jsonn).data);
-    console.log('stdout')
     console.log(original.toString('utf8'));
-    // console.log(jsonn)
   });
 }
 
 app.post('/submitInventory', (req,res) => {
   console.log('fetch received')
-  // console.log(req.body[1])
   let data = logData(req.body);
   res.json(data)
   testSpawn(data);

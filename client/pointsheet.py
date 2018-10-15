@@ -21,15 +21,10 @@ def writeInfoDataToExcel(data, page):
         format = element["format"]
         if(format == 'percentage'):
             data[field] = data[field]+'%'
-            print(data[field])
         elif(format == 'currency'):
             data[field] = '$'+ data[field]
         # print(page[data[field]])
-        print(field)
-        print(data[field])
-        print(format)
         page[cellLocation] = data[field]
-        print(page[cellLocation].value)
 # TODO
 # include number format as parameter within inputDictionary objects
 
