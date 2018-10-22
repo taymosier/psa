@@ -7,6 +7,7 @@ var proxyaddr = require('proxy-addr');
 var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var MongoClient = require('mongodb').MongoClient;
 
 
 const app = express();
@@ -28,25 +29,75 @@ app.get('/api/getlist', (req,res) => {
     res.json(list);
 });
 
+
+//Prints inputted data to console
 function logData(data){
-  for(let i =0; i<data[1][1].length; i++){
-    if(data[1][i]['issued'] === ''){
-      data[1][i]['issued'] = 0;
-    }
-    if(data[1][i]['returned'] === ''){
-      data[1][i]['returned'] = 0;
+  console.log('Log data')
+  for( let i =0; i < data[1].length; i++){
+    if(data[1][i]['quantity']['issued'] === ''){
+      data[1][i]["quantity"]['issued'] = 0;
+      data[1][i]["quantity"]['returned'] = 0;
     }
   }
   return data;
 }
 
-function testSpawn(data){
+// On submit inventory request, runs a python script
+// that posts the inputted information to a mongoDB
+// database, then writes the data to an excel file,
+// and emails the generated spreadsheet
+app.post('/submitInventory', (req,res) => {
+  console.log('submit request received')
+  let data = logData(req.body);
+  res.json(data)
+  spawnPythonProcess('send', data);
+});
+
+// On save inventory request, runs a python script that
+// saves the inputted data to the mongoDB database
+app.post('/savePointSheet', (req,res) => {
+  console.log('save request received')
+  let data = logData(req.body);
+  res.json(data)
+  spawnPythonProcess('save', data);
+});
+
+//Determines which python script to run
+function spawnPythonProcess(option, data){
+  console.log
   let spawn = require('child_process').spawn;
+  switch(option){
+    case "save":
+      saveDataToDB(spawn, data);
+      break;
+    case "send":
+      writeDataToDBAndEmail(spawn, data);
+      break;
+    default:
+      console.log('Bad request received')
+      break;
+  }
+}
+
+
+function writeDataToDBAndEmail(spawn, data, ){
   let pythonProcess = spawn('python', ['pointsheet.py', JSON.stringify(data)], {
     'cwd': './client'
   });
+  printDataToConsole(pythonProcess, data)
+}
 
-  pythonProcess.stdout.on('data', function(data){
+
+function saveDataToDB(spawn, data){
+  let pythonProcess = spawn('python', ['savePointSheet.py', JSON.stringify(data)], {
+    'cwd': './client'
+  });
+  printDataToConsole(pythonProcess, data)
+}
+
+
+function printDataToConsole(childProcess, data){
+  childProcess.stdout.on('data', function(data){
     let newBuffer = Buffer.from(data)
     let jsonn = JSON.stringify(newBuffer)
     let original = Buffer.from(JSON.parse(jsonn).data);
@@ -54,16 +105,49 @@ function testSpawn(data){
   });
 }
 
-app.post('/submitInventory', (req,res) => {
-  console.log('fetch received')
-  let data = logData(req.body);
-  res.json(data)
-  testSpawn(data);
+// Upon receiving post request, submits
+// data to mongoDB
+app.post('/requestDocument', (req,res) => {
+  let selectedDocumentDate = req.body;
+  console.log(req.body[0])
+  let url = "mongodb://localhost:27017/";
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("gcc");
+    dbo.collection("inventory").findOne({date: `${req.body[0]}`}, function(err, result)
+    {
+      if (err) throw err;
+      console.log('Hi there')
+      console.log(result);
+      db.close();
+      res.send(result);
+    });
+  });
 })
 
+// Listens for initial document load request, then sends back the five most
+// recent spreadsheets
+app.get('/initialDocLoad', (req, res) => {
+  let dateList = [];
+  let url = "mongodb://localhost:27017/";
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("gcc");
+    dbo.collection("inventory").find({}).toArray(function(err, result)
+    {
+      if (err) throw err;
+      console.log('Hi there')
+      for(let i=0; i < 5; i++){
+        dateList.push(result[i]["date"])
+        console.log(result[i]["date"]);
+      }
+      db.close();
+      res.send(dateList);
+    });
+  });
+})
 
-
-// Handles any requests that don't match the ones above
+//Listens for request of homepage url
 app.get('/*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });

@@ -2,102 +2,122 @@ inputDictionary = [
     {
         "name": "eventNumber",
         "location": "c5",
-        "format": "string"
+        "format": "string",
+        "index": "0"
     },
     {
         "name": "eventDate",
         "location" : "c6",
-        "format": "date"
+        "format": "date",
+        "index": "1"
     },
     {
         "name": "bartenders",
         "location" : "c7",
-        "format": "array[string]"
+        "format": "string",
+        "index": "2"
     },
     {
         "name": "room",
         "location" : "c8",
-        "format": "string"
+        "format": "string",
+        "index": "3"
     },
     {
         "name": "host",
         "location" : "c9",
-        "format": "string"
+        "format": "string",
+        "index": "4"
     },
     {
         "name": "salesTax",
         "location" : "c10",
-        "format": "percentage"
+        "format": "percentage",
+        "index": "5"
     },
     {
         "name": "serviceCharge",
         "location" : "d11",
-        "format": "percentage"
+        "format": "percentage",
+        "index": "6"
     },
     {
         "name": "cashCollected",
         "location" : "c12",
-        "format": "currency"
+        "format": "currency",
+        "index": "7"
     },
     {
         "name": "callLiquorPrice",
         "location" : "c15",
-        "format": "currency"
+        "format": "currency",
+        "index": "8"
     },
     {
         "name": "premiumLiquorPrice",
         "location" : "c16",
-        "format": ""
+        "format": "currency",
+        "index": "9"
     },
     {
         "name": "topLiquorPrice",
         "location" : "c17",
-        "format": "currency"
+        "format": "currency",
+        "index": "10"
     },
     {
         "name": "wellLiquorPrice",
         "location" : "c18",
-        "format": "currency"
+        "format": "currency",
+        "index": "11"
     },
     {
         "name": "chardonnayPrice",
         "location" : "c22",
-        "format": "currency"
+        "format": "currency",
+        "index": "12"
     },
     {
         "name": "merlotPrice",
         "location" : "c23",
-        "format": "currency"
+        "format": "currency",
+        "index": "13"
     },
     {
         "name": "cabernetSauvignonPrice",
         "location" : "c24",
-        "format": "currency"
+        "format": "currency",
+        "index": "14"
     },
     {
         "name": "pinotGrigioPrice",
         "location" : "c25",
-        "format": "currency"
+        "format": "currency",
+        "index": "15"
     },
     {
         "name": "whiteZinfandelPrice",
         "location" : "c26",
-        "format": "currency"
+        "format": "currency",
+        "index": "16"
     },
     {
         "name": "champagnePrice",
         "location" : "c27",
-        "format": "currency"
+        "format": "currency",
+        "index": "17"
     },
     {
         "name": "domesticBeerPrice",
         "location" : "c29",
-        "format": "currency"
+        "format": "currency",
+        "index": "18"
     },
     {
         "name": "importBeerPrice",
         "location" : "c30",
-        "format": "currency"
+        "format": "currency",
+        "index": "19"
     }
 ]
 
@@ -210,7 +230,7 @@ pointDictionary = [
     {
         "name": 'Peach Schnapps',
         "issued": 'e27',
-        "returned": 'f2'
+        "returned": 'f27'
     },
     {
         "name": 'Triple Sec',

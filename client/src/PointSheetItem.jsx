@@ -11,8 +11,10 @@ export class PointSheetItem extends Component {
       type: this.props.type,
       category: this.props.category,
       index: this.props.index,
-      issued: '',
-      returned: '',
+      "quantity": {
+        "issued": '',
+        "returned": '',
+      }
     };
 
     this.handleAmountIssuedChanged = this.handleAmountIssuedChanged.bind(this);
@@ -23,22 +25,28 @@ export class PointSheetItem extends Component {
     e.preventDefault();
     console.log(e);
     let item = this;
+    console.log(item)
     this.setState({
-      issued: e.target.value,
-      returned: this.state.returned
+      "quantity": {
+        "issued": e.target.value,
+        "returned": this.state.quantity["returned"]
+      }
     });
-    this.props.handleItemChange(e, item, 'issued');
+    this.props.handleItemChange(e, item, 'issued', this.state.name);
   }
 
   handleAmountReturnedChanged(e){
     e.preventDefault();
     console.log(e);
     let item = this;
+    console.log(item.state.name)
     this.setState({
-      issued: this.state.issued,
-      returned: e.target.value,
+      "quantity": {
+        "issued": this.state.quantity["issued"],
+        "returned": e.target.value
+      }
     });
-    this.props.handleItemChange(e, item, 'returned');
+    this.props.handleItemChange(e, item, 'returned', this.state.name);
   }
 
 

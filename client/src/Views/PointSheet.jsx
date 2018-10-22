@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import { PointSheetNew } from './PointSheetNew';
 import { PointSheetInput } from './PointSheetInput'
 export default class PointSheet extends Component {
@@ -9,6 +10,7 @@ export default class PointSheet extends Component {
     this.handlePointChange = this.handlePointChange.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSave = this.handleSave.bind(this);
 
     this.state = {
       activeTab: '1',
@@ -26,14 +28,15 @@ export default class PointSheet extends Component {
   }
 
   handleInputChange(data){
+    // console.log()
     this.setState({
-      info: [data]
+      "info": data
     });
   }
 
   handlePointChange(data){
     this.setState({
-      inventory: data,
+      "inventory": data
     })
   }
 
@@ -52,10 +55,20 @@ export default class PointSheet extends Component {
       body: JSON.stringify(data)
     })
     .then((res) => res.json())
-    // .then((data) => {
-    //   console.log(data)
-    // })
   }
+
+  handleSave = () => {
+    let data = [this.state.info, this.state.inventory]
+    fetch('./savePointsheet', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then((res) => res.json())
+  }
+
 
 
   render(){
@@ -79,7 +92,17 @@ export default class PointSheet extends Component {
             </NavLink>
           </NavItem>
           <NavItem>
+            <Button onClick={this.handleSave}>Save</Button>
+          </NavItem>
+          <NavItem>
             <Button onClick={this.handleSubmit}>Submit</Button>
+          </NavItem>
+          <NavItem>
+            <Link to={'./'}>
+              <Button>
+                 Home
+              </Button>
+            </Link>
           </NavItem>
         </Nav>
 

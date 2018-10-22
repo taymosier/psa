@@ -32,23 +32,14 @@ export class PointSheetNew extends Component {
 
 
   setPointSheet(inventory){
-    // let inventoryCopy = inventory;
     this.setState({
       search: this.state.search,
       inventory: inventory
     });
+    console.log('setPointSheet inventory:')
+    console.log(this.state.inventory)
     this.props.handlePointChange(inventory)
   }
-
-  // handleChange(e){
-  //   // console.log(e.target.name)
-  //   // console.log(e.target.value)
-  //   let inventoryCopy = this.state.inventory;
-  //   inventoryCopy[`${e.target.name}`] = e.target.value
-  //   this.setState({inventoryCopy})
-  //   console.log(this.state[`${e.target.name}`]);
-  //   this.props.handleInputChange(this.state)
-  // }
 
   render(){
     const search = this.state.search;

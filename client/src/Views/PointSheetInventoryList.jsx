@@ -5,194 +5,314 @@ export class PointSheetInventoryList extends Component {
   constructor(props){
     super(props);
     this.state = {
-      'inventory': [
+      "inventory": [
         {
-         'name': 'Aristocrat Vodka',
-         'issued': '',
-         'returned': ''
-        },
-        {
-          'name': 'Smirnoff',
-          'issued': '',
-          'returned': ''
+          "name": "Aristocrat Vodka",
+          "quantity": {
+           "issued": "",
+           "returned": ""
+          }
         },
         {
-          'name': 'Absolut',
-          'issued': '',
-          'returned': ''
+          "name": "Smirnoff",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Ciroc',
-          'issued': '',
-          'returned': ''
+          "name": "Absolut",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Aristocrat Rum',
-          'issued': '',
-          'returned': ''
+          "name": "Ciroc",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Bacardi',
-          'issued': '',
-          'returned': ''
+          "name": "Aristocrat Rum",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Captain Morgan',
-          'issued': '',
-          'returned': ''
+          "name": "Bacardi",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Aristocrat Gin',
-          'issued': '',
-          'returned': ''
+          "name": "Captain Morgan",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Gordons',
-          'issued': '',
-          'returned': ''
+          "name": "Aristocrat Gin",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Tanqueray',
-          'issued': '',
-          'returned': ''
+          "name": "Gordons",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Aristocrat Tequila',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Jose Cuervo Gold',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Patron',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Dewars',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Hennessy',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Jim Beam',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Jack Daniels',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Seagrams 7',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Crown Royal',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Amaretto',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Blue Curacao',
-          'issued': '',
-          'returned': ''
-        },
-        { 'name': 'Peach Schnapps',
-          'issued': '',
-          'returned': ''
+          "name": "Tanqueray",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
         {
-          'name': 'Triple Sec',
-          'issued': '',
-          'returned': ''
+          "name": "Aristocrat Tequila",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Fireball',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Jose Cuervo Gold",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Johnnie Walker Black',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Patron",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Jameson',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Dewars",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Grey Goose',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Hennessy",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Bud Light',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Jim Beam",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Bud Light Platinum',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Jack Daniels",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Bud Light with Lime',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Seagrams 7",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Budweiser',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Crown Royal",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Coors Light',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Amaretto",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Corona',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Blue Curacao",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Heineken',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Peach Schnapps",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Michelob Ultra',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Triple Sec",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Miller Lite',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Fireball",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Natural Light',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Johnnie Walker Black",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Yuengling',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Jameson",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Chardonnay',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Grey Goose",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Merlot',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Bud Light",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Cabernet Sauvignon',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Bud Light Platinum",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Pinot Grigio',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Bud Light with Lime",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'White Zinfandel',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Budweiser",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         },
-        { 'name': 'Champagne',
-          'issued': '',
-          'returned': ''
+        {
+          "name": "Coors Light",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Corona",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Heineken",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Michelob Ultra",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Miller Lite",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Natural Light",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Yuengling",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Chardonnay",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Merlot",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Cabernet Sauvignon",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Pint Grigio",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "White Zinfandel",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
+        },
+        {
+          "name": "Champagne",
+          "quantity": {
+             "issued": "",
+             "returned": ""
+          }
         }
       ]
     };
@@ -200,10 +320,17 @@ export class PointSheetInventoryList extends Component {
     this.handleItemChange = this.handleItemChange.bind(this);
   }
 
-  handleItemChange(e, item, inputField){
+  handleItemChange(e, item, inputField, name){
     e.preventDefault();
     let inventory = this.state.inventory;
-    inventory[item.state.index][`${inputField}`] = e.target.value;
+    console.log('Item:')
+    console.log(item)
+    console.log(inventory[0].quantity["issued"])
+    console.log('e.target:')
+    console.log(e.target)
+    let index = item.state.index;
+    console.log(inventory[0])
+    inventory[index]["quantity"][`${inputField}`] = e.target.value;
     this.setState({inventory})
     this.props.setPointSheet(inventory);
   }

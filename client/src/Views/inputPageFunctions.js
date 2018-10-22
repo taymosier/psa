@@ -1,11 +1,3 @@
-export function handleEventNumberChange(e){
-  e.preventDefault();
-  console.log(e);
-  this.setState({
-    eventNumber: e.target.value,
-  })
-  this.handleChange(e);
-}
 
 export function handleEventDateChange(e){
   e.preventDefault();
