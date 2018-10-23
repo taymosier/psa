@@ -15,9 +15,9 @@ export class PointSheetList extends Component {
 
 //Once the component is mounted, calls a function which sends a request to the server to
 // receive a list of the five most recent point sheets
-  componentDidMount(){
-    this.getDocumentsByDate();
-  }
+  // componentDidMount(){
+  //   this.getDocumentsByDate();
+  // }
 
 //Sends a fetch GET request, then updates the component state according
 //to the data received
