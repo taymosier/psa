@@ -52,7 +52,7 @@ export class PointSheetNew extends Component {
 
 
     return(
-      <div>
+      <div className="pointSheetContainer">
         <SearchFilter handleSearch={this.handleSearch}/>
         <Form>
           <PointSheetInventoryList inventory={inventoryCopy} setPointSheet={this.setPointSheet}/>

@@ -71,6 +71,7 @@ function spawnPythonProcess(option, data){
       saveDataToDB(spawn, data);
       break;
     case "send":
+      console.log('case "send"')
       writeDataToDBAndEmail(spawn, data);
       break;
     default:
