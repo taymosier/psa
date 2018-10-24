@@ -87,10 +87,10 @@ function writeDataToDBAndEmail(spawn, data, ){
     let pythonProcess = spawn('python', ['pointsheet.py', JSON.stringify(data)], {
       'cwd': './client'
     });
+    printDataToConsole(pythonProcess, data)
   } catch(e){
     console.log(e)
   }
-  printDataToConsole(pythonProcess, data)
 }
 
 
