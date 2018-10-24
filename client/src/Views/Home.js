@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { PointSheetList } from './PointSheetList';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardTitle, CardText, Row, Col, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class Home extends Component {
   constructor(props){
@@ -18,7 +18,7 @@ class Home extends Component {
   }
 
   componentDidUpdate(){
-    { (this.state.selectedDocument !== '' && this.state.dataLoaded === false)
+    { this.state.selectedDocument !== '' && this.state.dataLoaded === false
       ? this.getSelectedDocument()
       : null
     }
