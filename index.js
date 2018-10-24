@@ -85,7 +85,7 @@ function writeDataToDBAndEmail(spawn, data, ){
   console.log('writing data to db')
   try{
     let pythonProcess = spawn('python', ['pointsheet.py', JSON.stringify(data)], {
-      'cwd': './client'
+      'cwd': '../client'
     });
     printDataToConsole(pythonProcess, data)
   } catch(e){
@@ -96,7 +96,7 @@ function writeDataToDBAndEmail(spawn, data, ){
 
 function saveDataToDB(spawn, data){
   let pythonProcess = spawn('python', ['savePointSheet.py', JSON.stringify(data)], {
-    'cwd': './client'
+    'cwd': '../client'
   });
   printDataToConsole(pythonProcess, data)
 }
