@@ -64,7 +64,7 @@ app.post('/savePointSheet', (req,res) => {
 
 //Determines which python script to run
 function spawnPythonProcess(option, data){
-  console.log
+  console.log('Spawning python process')
   let spawn = require('child_process').spawn;
   switch(option){
     case "save":
@@ -152,6 +152,6 @@ app.get('/*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
-app.listen(8000, "127.0.0.1");
+app.listen(5000, "127.0.0.1");
 
 console.log('App is listening');
