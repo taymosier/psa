@@ -15,15 +15,29 @@ export class PointSheetList extends Component {
 
 //Once the component is mounted, calls a function which sends a request to the server to
 // receive a list of the five most recent point sheets
-  // componentDidMount(){
-  //   this.getDocumentsByDate();
-  // }
+  componentDidMount(){
+    this.getDocumentsByDate();
+  }
 
 //Sends a fetch GET request, then updates the component state according
 //to the data received
   getDocumentsByDate = () => {
     fetch('/initialDocLoad', {method: "GET"})
-    .then(res => res.json())
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject({
+          status: res.status,
+            statusText: res.statusText
+        })
+      }
+    })
+    .catch(error => {
+      if(error.status === 404){
+        console.log(error)
+      }
+    })
     .then(dateList => this.setState({
       documentDates: dateList
     }))
