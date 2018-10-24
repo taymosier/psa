@@ -9,6 +9,7 @@ from email import encoders
 from mongoFunctions import addPostToMongoDB, writePointDataToExcel, writeInfoDataToExcel
 
 f = sys.argv[1]
+print('Lososos')
 obj = json.loads(f)
 info=obj[0]
 alcohol = obj[1]
@@ -27,7 +28,6 @@ except:
 print('Generating mongodb data object')
 pointSheetComplete = [info, alcohol]
 print('Object created')
-print('Initializing MongoDB process.')
 print('Calling runMongo function()')
 addPostToMongoDB('gcc', 'inventory', pointSheetComplete)
 print('info written')
