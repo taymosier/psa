@@ -49,7 +49,7 @@ export default class PointSheet extends Component {
     fetch('./submitInventory', {
       method: "POST",
       headers: {
-        'Content-type': 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
@@ -61,7 +61,7 @@ export default class PointSheet extends Component {
     fetch('./savePointsheet', {
       method: "POST",
       headers: {
-        'Content-type': 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
