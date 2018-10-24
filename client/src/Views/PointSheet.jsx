@@ -46,7 +46,7 @@ export default class PointSheet extends Component {
 
   sendList = () => {
     let data = [this.state.info, this.state.inventory]
-    fetch('./submitInventory', {
+    fetch('../submitInventory', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ export default class PointSheet extends Component {
 
   handleSave = () => {
     let data = [this.state.info, this.state.inventory]
-    fetch('./savePointsheet', {
+    fetch('../savePointsheet', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
