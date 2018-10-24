@@ -28,7 +28,6 @@ export default class PointSheet extends Component {
   }
 
   handleInputChange(data){
-    // console.log()
     this.setState({
       "info": data
     });

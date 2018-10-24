@@ -51,6 +51,7 @@ export class PointSheetInput extends Component {
     this.setState({
       info: infoCopy
     })
+    this.props.handleInputChange(infoCopy);
   }
 
   generateFormGroups(keys){
