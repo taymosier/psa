@@ -113,6 +113,9 @@ function printDataToConsole(childProcess, data){
     let original = Buffer.from(JSON.parse(jsonn).data);
     console.log(original.toString('utf8'));
   });
+  childProcess.stderr.on('data', (data) => {
+    console.error(`child err:\n$data`)
+  })
 }
 
 // Upon receiving post request, submits
