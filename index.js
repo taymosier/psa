@@ -85,7 +85,6 @@ function writeDataToDBAndEmail(spawn, data, ){
   console.log('writing data to db')
   try{
     console.log('Data being written')
-    console.log(data)
     let pythonProcess = spawn('python', ['test.py', JSON.stringify(data)], {
       'cwd': './client'
     });
