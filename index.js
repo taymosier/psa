@@ -92,6 +92,7 @@ function writeDataToDBAndEmail(spawn, data, ){
   } catch(e){
     console.log(e)
   }
+  console.log('python process called/passed')
 }
 
 
