@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "openlist": "nano client/src/Views/List.js"
+    "openlist": "nano client/src/Views/List.js",
+    "updatepsa": "sudo git stash && sudo git pull && sudo npm run build && sudo service nginx restart && cd ../ && sudo node index"
   },
   "repository": {
     "type": "git",
