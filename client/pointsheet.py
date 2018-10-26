@@ -14,6 +14,9 @@ info=obj[0]
 print('this is info')
 print(info)
 alcohol = obj[1]
+print()
+print('this is alcohol')
+print(alcohol)
 wb = openpyxl.load_workbook('GCC Point Sheet Template 2015.06.19.xlsx')
 inputSheet = wb['Input']
 pointSheet = wb['Point']
