@@ -43,7 +43,7 @@ export class PointSheetPoint extends Component {
 
   render(){
     const search = this.state.search;
-    let inventoryCopy = inventory;
+    let inventoryCopy = this.state.inventory;
     if(search.length > 0){
       inventoryCopy = inventoryCopy.filter(function(product) {
         return product.name.toLowerCase().match( search );
