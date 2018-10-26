@@ -46,7 +46,7 @@ export class PointSheetInput extends Component {
       "Premium Liquor Price":"",
       "Top Liquor Price":"",
       "Well Liquor Price":"",
-      "Chardonnay Price":"",
+      "Chardonnay Price":'',
       "Merlot Price":"",
       "Cabernet Sauvignon Price":"",
       "Pinot Grigio Price":"",
