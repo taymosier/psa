@@ -40,7 +40,7 @@ export class PointSheetListSelect extends Component {
     }
     return(
       <select onChange={this.handleOptionSelect}>
-      <option>Select Point Sheet</option>
+        <option>Select Point Sheet</option>
         {options}
       </select>
     )
