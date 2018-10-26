@@ -12,7 +12,7 @@ f = sys.argv[1]
 obj = json.loads(f)
 info = obj[0]
 alcohol = obj[1]
-print('Data being fed to python')
+print('Data fed to python')
 print(obj)
 wb = openpyxl.load_workbook('GCC Point Sheet Template 2015.06.19.xlsx')
 inputSheet = wb['Input']
