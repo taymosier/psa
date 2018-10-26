@@ -24,14 +24,12 @@ export class PointSheet extends Component {
   }
 
   componentDidMount(){
-    console.log('Point sheet received data on mount, loading')
     if(this.props.data){
       console.log('Setting state')
       this.setState({
         info: this.props.data['info'],
         inventory: this.props.data['inventory']
       });
-      console.log('Point Sheet state set')
     }
   }
 

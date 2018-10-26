@@ -1,120 +1,120 @@
 inputDictionary = [
     {
-        "name": "eventNumber",
+        "name": "Event Number",
         "location": "c5",
         "format": "string",
         "index": "0"
     },
     {
-        "name": "eventDate",
+        "name": "Event Date",
         "location" : "c6",
         "format": "date",
         "index": "1"
     },
     {
-        "name": "bartenders",
+        "name": "Bartenders",
         "location" : "c7",
         "format": "string",
         "index": "2"
     },
     {
-        "name": "room",
+        "name": "Room",
         "location" : "c8",
         "format": "string",
         "index": "3"
     },
     {
-        "name": "host",
+        "name": "Host",
         "location" : "c9",
         "format": "string",
         "index": "4"
     },
     {
-        "name": "salesTax",
+        "name": "Sales Tax",
         "location" : "c10",
         "format": "percentage",
         "index": "5"
     },
     {
-        "name": "serviceCharge",
+        "name": "Service Charge",
         "location" : "d11",
         "format": "percentage",
         "index": "6"
     },
     {
-        "name": "cashCollected",
+        "name": "Cash Collected",
         "location" : "c12",
         "format": "currency",
         "index": "7"
     },
     {
-        "name": "callLiquorPrice",
+        "name": "Call Liquor Price",
         "location" : "c15",
         "format": "currency",
         "index": "8"
     },
     {
-        "name": "premiumLiquorPrice",
+        "name": "Premium Liquor Price",
         "location" : "c16",
         "format": "currency",
         "index": "9"
     },
     {
-        "name": "topLiquorPrice",
+        "name": "Top Liquor Price",
         "location" : "c17",
         "format": "currency",
         "index": "10"
     },
     {
-        "name": "wellLiquorPrice",
+        "name": "Well Liquor Price",
         "location" : "c18",
         "format": "currency",
         "index": "11"
     },
     {
-        "name": "chardonnayPrice",
+        "name": "Chardonnay Price",
         "location" : "c22",
         "format": "currency",
         "index": "12"
     },
     {
-        "name": "merlotPrice",
+        "name": "Merlot Price",
         "location" : "c23",
         "format": "currency",
         "index": "13"
     },
     {
-        "name": "cabernetSauvignonPrice",
+        "name": "Cabernet Sauvignon Price",
         "location" : "c24",
         "format": "currency",
         "index": "14"
     },
     {
-        "name": "pinotGrigioPrice",
+        "name": "Pinot Grigio Price",
         "location" : "c25",
         "format": "currency",
         "index": "15"
     },
     {
-        "name": "whiteZinfandelPrice",
+        "name": "White Zinfandel Price",
         "location" : "c26",
         "format": "currency",
         "index": "16"
     },
     {
-        "name": "champagnePrice",
+        "name": "Champagne Price",
         "location" : "c27",
         "format": "currency",
         "index": "17"
     },
     {
-        "name": "domesticBeerPrice",
+        "name": "Domestic Beer Price",
         "location" : "c29",
         "format": "currency",
         "index": "18"
     },
     {
-        "name": "importBeerPrice",
+        "name": "Import Beer Price",
         "location" : "c30",
         "format": "currency",
         "index": "19"
