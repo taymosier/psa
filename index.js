@@ -73,7 +73,7 @@ function spawnPythonProcess(option, data){
       break;
     case "send":
       console.log('case "send"')
-      console.log(data[1]["Aristocrat Vodka"]["quantity"])
+      console.log(data[1])
       console.log()
       writeDataToDBAndEmail(spawn, data);
       break;
