@@ -151,13 +151,15 @@ app.get('/initialDocLoad', (req, res) => {
       if (err) throw err;
       console.log('Hi there')
       if(result){
-        for(let i=result.length; i >= 0 || i > result.length-6; i--){
-          try{
-            dateList.push(result[i]["date"])
-            console.log(result[i]["date"]);
-          } catch(e){
-            console.log(`${i}: `+e)
-
+        console.log(result.length)
+        if(result.length > 0){
+          for(let i=0; i < result.length; i++){
+            try{
+              dateList.push(result[i]["date"])
+              console.log(result[i]["date"]);
+            } catch(e){
+              console.log(`${i}: `+e)
+            }
           }
         }
       }
