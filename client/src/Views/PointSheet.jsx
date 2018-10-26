@@ -41,12 +41,14 @@ export class PointSheet extends Component {
     this.setState({
       "info": data
     });
+    this.props.updateInfo(data);
   }
 
   handlePointChange(data){
     this.setState({
       "inventory": data
     })
+    this.props.updateInventory(data);
   }
 
   handleSubmit(e){

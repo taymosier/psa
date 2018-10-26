@@ -22,6 +22,8 @@ class Home extends Component {
     this.getSelectedDocument = this.getSelectedDocument.bind(this);
     this.getNewPointSheet = this.getNewPointSheet.bind(this);
     this.clearData = this.clearData.bind(this);
+    this.updateInfo = this.updateInfo.bind(this);
+    this.updateInventory = this.updateInventory.bind(this);
   }
 
   componentDidUpdate(){
@@ -76,11 +78,29 @@ class Home extends Component {
     });
   }
 
+  updateInfo(data){
+    this.setState({
+      data: {
+        info: data,
+        inventory: this.state.data.inventory
+      }
+    })
+  }
+
+  updateInventory(data){
+    this.setState({
+      data: {
+        info: this.state.data.info,
+        inventory: data
+      }
+    })
+  }
+
   render() {
     return (
     <div className="App">
       {this.state.data !== ''
-       ?<div><PointSheet data={this.state.data} clearData={this.clearData}/></div>
+       ?<div><PointSheet data={this.state.data} clearData={this.clearData} updateInfo={this.updateInfo} updateInventory={this.updateInventory}/></div>
        :<div>
           <h1>Point Sheet Home</h1>
           <Button onClick={this.getNewPointSheet}>
