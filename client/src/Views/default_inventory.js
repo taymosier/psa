@@ -287,7 +287,7 @@ export const default_inv = [
     }
   },
   {
-    name: "Pint Grigio",
+    name: "Pinot Grigio",
     quantity: {
        issued: "",
        returned: ""

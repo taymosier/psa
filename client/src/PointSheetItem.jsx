@@ -16,11 +16,14 @@ export class PointSheetItem extends Component {
 
     this.handleAmountIssuedChanged = this.handleAmountIssuedChanged.bind(this);
     this.handleAmountReturnedChanged = this.handleAmountReturnedChanged.bind(this);
+    this.formatIssuedInputValue = this.formatIssuedInputValue.bind(this);
+    this.formatReturnedInputValue = this.formatReturnedInputValue.bind(this);
+
   }
 
   handleAmountIssuedChanged(e){
     e.preventDefault();
-    console.log(e);
+    let formattedValue;
     let item = this;
     console.log(item)
     this.setState({
@@ -45,6 +48,36 @@ export class PointSheetItem extends Component {
     this.props.handleItemChange(e, item, 'returned', this.state.name);
   }
 
+  formatIssuedInputValue(e){
+    let formattedValue
+    if(e.target.value.toString().length === 1 && e.target.value >= 1){
+      console.log('formattign needed')
+      formattedValue = e.target.value.toString() + '.0';
+      formattedValue = parseFloat(formattedValue).toFixed(1);
+      console.log(formattedValue)
+      this.setState({
+        quantity: {
+          issued: formattedValue,
+          returned: this.state.quantity['returned']
+        }
+      })
+    }
+  }
+
+  formatReturnedInputValue(e){
+    let formattedValue;
+    if(e.target.value.toString().length === 1 && e.target.value >= 1){
+      formattedValue = e.target.value.toString() + '.0';
+      formattedValue = parseFloat(formattedValue).toFixed(1);
+      this.setState({
+        quantity: {
+          issued: this.state.quantity['issued'],
+          returned: formattedValue
+        }
+      })
+    }
+  }
+
 
 
   render(){
@@ -66,6 +99,7 @@ export class PointSheetItem extends Component {
                 placeholder="issued"
                 value={this.state.quantity.issued}
                 onChange={this.handleAmountIssuedChanged}
+                onBlur={this.formatIssuedInputValue}
               />
             </Col>
             <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
@@ -76,6 +110,8 @@ export class PointSheetItem extends Component {
                 placeholder="returned"
                 value={this.state.quantity.returned}
                 onChange={this.handleAmountReturnedChanged}
+                onBlur={this.formatReturnedInputValue}
+
               />
             </Col>
           </Col>

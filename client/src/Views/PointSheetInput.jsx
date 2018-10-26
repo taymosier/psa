@@ -11,11 +11,20 @@ export class PointSheetInput extends Component {
   constructor(props){
     super(props);
     this.state = {
-      info: this.props.info
+      info: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.setNewValue = this.setNewValue.bind(this);
     this.generateFormGroups = this.generateFormGroups.bind(this);
+    this.sortFields = this.sortFields.bind(this)
+  }
+
+  componentDidMount(){
+    let infoCopy = this.props.info;
+    infoCopy = this.sortFields(infoCopy)
+    this.setState({
+      info: infoCopy
+    })
   }
 
   handleChange(state){
@@ -23,10 +32,44 @@ export class PointSheetInput extends Component {
     this.props.handleInputChange(newState)
   }
 
+  sortFields(info){
+    let sortedFields = {
+      "Event Number": '',
+      "Event Date":"",
+      "Bartenders":"",
+      "Room":"",
+      "Host":"",
+      "Sales Tax":"",
+      "Service Charge":"",
+      "Cash Collected":"",
+      "Call Liquor Price":"",
+      "Premium Liquor Price":"",
+      "Top Liquor Price":"",
+      "Well Liquor Price":"",
+      "Chardonnay Price":"",
+      "Merlot Price":"",
+      "Cabernet Sauvignon Price":"",
+      "Pinot Grigio Price":"",
+      "White Zinfandel Price":"",
+      "Champagne Price":"",
+      "Domestic Beer Price":"",
+      "Import Beer Price":"",
+    };
+    let sortedKeys = Object.keys(sortedFields);
+    sortedKeys.map(key => {
+      sortedFields[key] = info[key]
+      console.log(sortedFields[key])
+    })
+    console.log('\nsorted keys')
+    console.log(sortedFields)
+    return sortedFields
+  }
+
   setNewValue(target){
     let name = target.name;
     let newValue = target.value;
     let infoCopy = this.state.info;
+
     infoCopy[`${name}`] = newValue;
     this.setState({
       info: infoCopy
