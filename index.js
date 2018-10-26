@@ -151,7 +151,7 @@ app.get('/initialDocLoad', (req, res) => {
       if (err) throw err;
       console.log('Hi there')
       if(result){
-        for(let i=result.length-1; i > result.length-6 || i >= 0; i--){
+        for(let i=result.length-1; i >= 0 || i > result.length-6; i--){
           try{
             dateList.push(result[i]["date"])
             console.log(result[i]["date"]);
