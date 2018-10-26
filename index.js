@@ -73,6 +73,8 @@ function spawnPythonProcess(option, data){
       break;
     case "send":
       console.log('case "send"')
+      console.log(data)
+      console.log()
       writeDataToDBAndEmail(spawn, data);
       break;
     default:
@@ -84,6 +86,7 @@ function spawnPythonProcess(option, data){
 
 function writeDataToDBAndEmail(spawn, data, ){
   console.log('writing data to db')
+  console.log(data)
   try{
     console.log('Data being written')
     let pythonProcess = spawn('python', ['pointsheet.py', JSON.stringify(data)], {
