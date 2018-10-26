@@ -95,13 +95,7 @@ def generatePost(info, inventory):
 
 def formatPostData(data):
     print('Format Post Data')
-    print(data[0])
-    print()
-    print(data[1])
-    info = data[0]
-    alcohol = data[1]
-    print('inventory in formatPostData')
-    print(data[1])
+    print(data)
     print('Calling generatePost function')
     post = generatePost(info, alcohol)
     return post
