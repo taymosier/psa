@@ -150,10 +150,11 @@ app.get('/initialDocLoad', (req, res) => {
     {
       if (err) throw err;
       console.log('Hi there')
-      console.log(result.length)
-      for(let i=result.length-1; i > result.length-6; i--){
-        dateList.push(result[i]["date"])
-        console.log(result[i]["date"]);
+      if(results){
+        for(let i=result.length-1; i > result.length-6 || i >= 0; i--){
+          dateList.push(result[i]["date"])
+          console.log(result[i]["date"]);
+        }
       }
       db.close();
       res.send(dateList);
