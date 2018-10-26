@@ -78,15 +78,14 @@ def writeInfoDataToExcel(data, page):
     print('Finished writing event information to excel')
 
 
-def generatePost(info, liquor):
+def generatePost(info, inventory):
     print('generatePost() called')
     # infoData = formatInfo(info)
     try:
         post = {
-            "info": info,
-            "inventory": liquor,
-            "date": datetime.datetime.now().strftime("%y-%m-%d-%H-%M")
-
+            info: info,
+            inventory: inventory,
+            date: datetime.datetime.now().strftime("%y-%m-%d-%H-%M")
         }
     except:
         print('Post generation failed.')
@@ -101,6 +100,8 @@ def formatPostData(data):
     print(data[1])
     info = data[0]
     alcohol = data[1]
+    print('inventory in formatPostData')
+    print(data[1])
     print('Calling generatePost function')
     post = generatePost(info, alcohol)
     return post
