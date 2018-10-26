@@ -10,12 +10,9 @@ from mongoFunctions import addPostToMongoDB, writePointDataToExcel, writeInfoDat
 
 f = sys.argv[1]
 obj = json.loads(f)
-info=obj[0]
-print('this is info')
-print(info)
+info = obj[0]
 alcohol = obj[1]
-print()
-print('this is alcohol')
+print('Data being fed to python')
 print(obj)
 wb = openpyxl.load_workbook('GCC Point Sheet Template 2015.06.19.xlsx')
 inputSheet = wb['Input']

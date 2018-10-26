@@ -49,6 +49,7 @@ function logData(data){
 app.post('/submitInventory', (req,res) => {
   console.log('submit request received')
   let data = logData(req.body);
+  console.log(data)
   res.json(data)
   spawnPythonProcess('send', data);
 });
