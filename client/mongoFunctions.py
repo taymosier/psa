@@ -67,7 +67,6 @@ def writePointDataToExcel(data, page):
 def writeInfoDataToExcel(data, page):
     print('Writing event information to excel')
     for element in inputDictionary:
-        print(data[element["name"]])
         index = int(element["index"])
         name = element["name"]
         location = element["location"]
@@ -96,7 +95,8 @@ def generatePost(info, inventory):
 def formatPostData(data):
     print('Format Post Data')
     print(data)
-    print('Calling generatePost function')
+    info = data[0]
+    alcohol = data[1]
     post = generatePost(info, alcohol)
     return post
 
