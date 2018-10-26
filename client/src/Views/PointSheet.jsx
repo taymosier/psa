@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { PointSheetPoint } from './PointSheetPoint';
-import { PointSheetInput } from './PointSheetInput'
+import { PointSheetInput } from './PointSheetInput';
+import {default_info} from './default_info';
+import {default_inv} from './default_inventory';
+
 
 export class PointSheet extends Component {
   constructor(props){
@@ -15,17 +18,20 @@ export class PointSheet extends Component {
 
     this.state = {
       activeTab: '1',
-      info: '',
-      inventory: ''
+      info: default_info,
+      inventory: default_inv
     };
   }
 
   componentDidMount(){
+    console.log('Point sheet received data on mount, loading')
     if(this.props.data){
+      console.log('Setting state')
       this.setState({
         info: this.props.data['info'],
         inventory: this.props.data['inventory']
-      })
+      });
+      console.log('Point Sheet state set')
     }
   }
 

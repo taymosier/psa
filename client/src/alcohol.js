@@ -5,266 +5,311 @@
 export const inventory = [
     {
       name: 'Aristocrat Vodka',
-      type: 'vodka',
-      category: 'well',
-      index: '0'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Smirnoff',
-      type: 'vodka',
-      category: 'call',
-      index: '1'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Absolut',
-      type: 'vodka',
-      category: 'premium',
-      index: '2'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Ciroc',
-      type: 'vodka',
-      category: 'top',
-      index: '3'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Aristocrat Rum',
-      type: 'rum',
-      category: 'well',
-      index: '4'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Bacardi',
-      type: 'rum',
-      category: 'call',
-      index: '5'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Captain Morgan',
-      type: 'rum',
-      category: 'premium',
-      index: '6'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Aristocrat Gin',
-      type: 'gin',
-      category: 'well',
-      index: '7'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Gordons',
-      type: 'gin',
-      category: 'call',
-      index: '8'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Tanqueray',
-      type: 'gin',
-      category: 'premium',
-      index: '9'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Aristocrat Tequila',
-      type: 'tequila',
-      category: 'well',
-      index: '10'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Jose Cuervo Gold',
-      type: 'tequila',
-      category: 'call',
-      index: '11'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Patron',
-      type: 'tequila',
-      category: 'top',
-      index: '12'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Dewars',
-      type: 'premium',
-      category: 'premium',
-      index: '13'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Hennessy',
-      type: 'scotch',
-      category: 'top',
-      index: '14'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Jim Beam',
-      type: 'bourbon',
-      category: 'call',
-      index: '15'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Jack Daniels',
-      type: 'bourbon',
-      category: 'premium',
-      index: '16'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Seagrams 7',
-      type: 'whisky',
-      category: 'call',
-      index: '17'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Crown Royal',
-      type: 'whisky',
-      category: 'premium',
-      index: '18'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Amaretto',
-      type: 'liqueur',
-      category: 'well',
-      index: '19'
+      index: '19',
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Blue Curacao',
-      type: 'liqueur',
-      category: 'well',
-      index: '20'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Peach Schnapps',
-      type: 'liqueur',
-      category: 'well',
-      index: '21'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Triple Sec',
-      type: 'liqueur',
-      category: 'well',
-      index: '22'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Fireball',
-      type: 'non-standard',
-      category: 'call',
-      index: '23'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Johnnie Walker Black',
-      type: 'non-standard',
-      category: 'top',
-      index: '24'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Jameson',
-      type: 'non-standard',
-      category: 'Premium',
-      index: '25'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Grey Goose',
-      type: 'vodka',
-      category: 'top',
-      index: '26'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Bud Light',
-      type: 'beer',
-      category: 'domestic',
-      index: '27'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Bud Light Platinum',
-      type: 'beer',
-      category: 'domestic',
-      index: '28'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Bud Light with Lime',
-      type: 'beer',
-      category: 'domestic',
-      index: '29'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Budweiser',
-      type: 'beer',
-      category: 'domestic',
-      index: '30'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Coors Light',
-      type: 'beer',
-      category: 'domestic',
-      index: '31'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Corona',
-      type: 'beer',
-      category: 'import',
-      index: '32'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Heineken',
-      type: 'beer',
-      category: 'import',
-      index: '33'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Michelob Ultra',
-      type: 'beer',
-      category: 'domestic',
-      index: '34'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Miller Lite',
-      type: 'beer',
-      category: 'domestic',
-      index: '35'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Natural Light',
-      type: 'beer',
-      category: 'domestic',
-      index: '36'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Yuengling',
-      type: 'beer',
-      category: 'domestic',
-      index: '37'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Chardonnay',
-      type: 'wine',
-      category: 'wine',
-      index: '38'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Merlot',
-      type: 'wine',
-      category: 'wine',
-      index: '39'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Cabernet Sauvignon',
-      type: 'wine',
-      category: 'wine',
-      index: '40'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Pinot Grigio',
-      type: 'wine',
-      category: 'wine',
-      index: '41'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'White Zinfandel',
-      type: 'wine',
-      category: 'wine',
-      index: '42'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     },
     {
       name: 'Champagne',
-      type: 'wine',
-      category: 'wine',
-      index: '43'
+      quantity: {
+       issued: "",
+       returned: ""
+      }
     }
 ];

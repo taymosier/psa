@@ -24,10 +24,18 @@ export class PointSheetPoint extends Component {
     super(props);
     this.state = {
       search: '',
-      inventory: this.props.inventory
+      inventory: ''
     };
     this.handleSearch = handleSearch.bind(this);
     this.setPointSheet = this.setPointSheet.bind(this);
+  }
+
+  componentDidMount(){
+    if(this.props.inventory){
+      this.setState({
+        inventory: this.props.inventory
+      })
+    }
   }
 
 
@@ -54,9 +62,12 @@ export class PointSheetPoint extends Component {
     return(
       <div className="pointSheetContainer">
         <SearchFilter handleSearch={this.handleSearch}/>
-        <Form>
-          <PointSheetInventoryList inventory={this.state.inventory} setPointSheet={this.setPointSheet}/>
-        </Form>
+        {this.state.inventory !== ''
+          ? <Form>
+              <PointSheetInventoryList inventory={this.state.inventory} setPointSheet={this.setPointSheet}/>
+            </Form>
+          : null
+        }
       </div>
 
     )

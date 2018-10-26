@@ -8,9 +8,6 @@ export class PointSheetItem extends Component {
     super(props);
     this.state = {
       name: this.props.name,
-      type: this.props.type,
-      category: this.props.category,
-      index: this.props.index,
       quantity: {
         "issued": this.props.item['quantity']['issued'],
         "returned": this.props.item['quantity']['returned'],
@@ -39,7 +36,6 @@ export class PointSheetItem extends Component {
     e.preventDefault();
     console.log(e);
     let item = this;
-    console.log(item.state.name)
     this.setState({
       "quantity": {
         "issued": this.state.quantity["issued"],
