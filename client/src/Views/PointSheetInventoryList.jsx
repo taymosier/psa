@@ -6,7 +6,7 @@ export class PointSheetInventoryList extends Component {
   constructor(props){
     super(props);
     this.state = {
-      "inventory": this.props.inventory
+      inventory: this.props.inventory
     };
 
     this.handleItemChange = this.handleItemChange.bind(this);
@@ -29,7 +29,7 @@ export class PointSheetInventoryList extends Component {
 
   render(){
     // let inventoryCopy = inventory;
-    let inventoryList = this.state.inventory.map(item =>
+    let inventoryList = this.props.inventory.map(item =>
       // TODO Put PointSheetItems into PointSheetItemList component
       // Pass state of PointSheetItem Inputs into state of PointSheetItemList
       // Pass PointSheetItemList state to PointSheetNewComponent
