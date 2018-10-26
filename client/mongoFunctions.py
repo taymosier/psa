@@ -83,9 +83,9 @@ def generatePost(info, inventory):
     # infoData = formatInfo(info)
     try:
         post = {
-            info: info,
-            inventory: inventory,
-            date: datetime.datetime.now().strftime("%y-%m-%d-%H-%M")
+            "info": info,
+            "inventory": inventory,
+            "date": datetime.datetime.now().strftime("%y-%m-%d-%H-%M")
         }
     except:
         print('Post generation failed.')
