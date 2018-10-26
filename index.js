@@ -156,7 +156,6 @@ app.get('/initialDocLoad', (req, res) => {
           for(let i=0; i < result.length; i++){
             try{
               dateList.push(result[i]["date"])
-              console.log(result[i]["date"]);
             } catch(e){
               console.log(`${i}: `+e)
             }
