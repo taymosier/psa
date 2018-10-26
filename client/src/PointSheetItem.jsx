@@ -11,9 +11,9 @@ export class PointSheetItem extends Component {
       type: this.props.type,
       category: this.props.category,
       index: this.props.index,
-      "quantity": {
-        "issued": '',
-        "returned": '',
+      quantity: {
+        "issued": this.props.item['quantity']['issued'],
+        "returned": this.props.item['quantity']['returned'],
       }
     };
 
@@ -68,7 +68,7 @@ export class PointSheetItem extends Component {
                 name="issued"
                 id={amountIssued}
                 placeholder="issued"
-                value={this.state.issued}
+                value={this.state.quantity.issued}
                 onChange={this.handleAmountIssuedChanged}
               />
             </Col>
@@ -78,7 +78,7 @@ export class PointSheetItem extends Component {
                 name='returned'
                 id={amountReturned}
                 placeholder="returned"
-                value={this.state.returned}
+                value={this.state.quantity.returned}
                 onChange={this.handleAmountReturnedChanged}
               />
             </Col>

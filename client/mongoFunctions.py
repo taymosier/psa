@@ -33,9 +33,11 @@ def formatAlcohol(alc):
 
 def formatInfo(info):
     result = []
+    print('formatInfo')
+    print(info)
     for item in info:
         result.append(item)
-    print('formatInfo result')
+    print()
     print(result)
     return result
 
@@ -78,11 +80,11 @@ def writeInfoDataToExcel(data, page):
 
 def generatePost(info, liquor):
     print('generatePost() called')
-    infoData = formatInfo(info)
+    # infoData = formatInfo(info)
     try:
         post = {
-            "info": infoData,
-            "liquor": liquor,
+            "info": info,
+            "inventory": liquor,
             "date": datetime.datetime.now().strftime("%y-%m-%d-%H-%M")
 
         }
@@ -93,6 +95,10 @@ def generatePost(info, liquor):
 
 
 def formatPostData(data):
+    print('Format Post Data')
+    print(data[0])
+    print()
+    print(data[1])
     info = data[0]
     alcohol = data[1]
     print('Calling generatePost function')

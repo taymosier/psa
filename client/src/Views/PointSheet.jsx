@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { PointSheetNew } from './PointSheetNew';
+import { PointSheetPoint } from './PointSheetPoint';
 import { PointSheetInput } from './PointSheetInput'
-export default class PointSheet extends Component {
+
+export class PointSheet extends Component {
   constructor(props){
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -17,6 +18,15 @@ export default class PointSheet extends Component {
       info: '',
       inventory: ''
     };
+  }
+
+  componentDidMount(){
+    if(this.props.data){
+      this.setState({
+        info: this.props.data['info'],
+        inventory: this.props.data['inventory']
+      })
+    }
   }
 
   toggle(tab) {
@@ -98,7 +108,7 @@ export default class PointSheet extends Component {
           </NavItem>
           <NavItem>
             <Link to={'./'}>
-              <Button>
+              <Button onClick={this.props.clearData}>
                  Home
               </Button>
             </Link>
@@ -109,14 +119,14 @@ export default class PointSheet extends Component {
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
-              <PointSheetInput handleInputChange={this.handleInputChange}/>
+              <PointSheetInput handleInputChange={this.handleInputChange} info={this.props.data.info}/>
             </Col>
           </Row>
         </TabPane>
         <TabPane tabId="2">
           <Row>
             <Col sm="6">
-              <PointSheetNew handlePointChange={this.handlePointChange}/>
+              <PointSheetPoint handlePointChange={this.handlePointChange} inventory={this.props.data.inventory}/>
             </Col>
           </Row>
         </TabPane>

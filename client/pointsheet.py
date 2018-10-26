@@ -9,13 +9,14 @@ from email import encoders
 from mongoFunctions import addPostToMongoDB, writePointDataToExcel, writeInfoDataToExcel
 
 f = sys.argv[1]
-print('Lososos')
 obj = json.loads(f)
 info=obj[0]
+print('this is info')
+print(info)
 alcohol = obj[1]
 wb = openpyxl.load_workbook('GCC Point Sheet Template 2015.06.19.xlsx')
-inputSheet = wb.get_sheet_by_name('Input')
-pointSheet = wb.get_sheet_by_name('Point')
+inputSheet = wb['Input']
+pointSheet = wb['Point']
 
 try:
     writePointDataToExcel(alcohol, pointSheet)

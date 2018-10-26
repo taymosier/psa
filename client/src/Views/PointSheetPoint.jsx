@@ -19,12 +19,12 @@ import { Button, Form } from 'reactstrap';
 //     on the actual spreadsheet
 
 
-export class PointSheetNew extends Component {
+export class PointSheetPoint extends Component {
   constructor(props){
     super(props);
     this.state = {
       search: '',
-      inventory: ''
+      inventory: this.props.inventory
     };
     this.handleSearch = handleSearch.bind(this);
     this.setPointSheet = this.setPointSheet.bind(this);
@@ -55,7 +55,7 @@ export class PointSheetNew extends Component {
       <div className="pointSheetContainer">
         <SearchFilter handleSearch={this.handleSearch}/>
         <Form>
-          <PointSheetInventoryList inventory={inventoryCopy} setPointSheet={this.setPointSheet}/>
+          <PointSheetInventoryList inventory={this.state.inventory} setPointSheet={this.setPointSheet}/>
         </Form>
       </div>
 

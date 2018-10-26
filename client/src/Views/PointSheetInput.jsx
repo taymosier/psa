@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'reactstrap';
 import { PointSheetInputItemFormGroup } from './PointSheetInputItemFormGroup';
+import {default_info} from './default_info';
 
 // TODO
 // Add onChange handler for Cash Collected input
@@ -10,28 +11,7 @@ export class PointSheetInput extends Component {
   constructor(props){
     super(props);
     this.state = {
-      info: {
-        eventNumber: "Ballers Bar",
-        eventDate: "10/24/2018",
-        bartenders: 'Taylor Mosier, Candice Overcash',
-        room: "Exhibit Hall B",
-        host: "n",
-        salesTax: "7",
-        serviceCharge: "21",
-        cashCollected: "1400.00",
-        callLiquorPrice: "6",
-        premiumLiquorPrice: "7",
-        topLiquorPrice: "9",
-        wellLiquorPrice: "5",
-        chardonnayPrice: "5",
-        merlotPrice: "5",
-        cabernetSauvignonPrice: "5",
-        pinotGrigioPrice: "5",
-        whiteZinfandelPrice: "5",
-        champagnePrice: "5",
-        domesticBeerPrice: "4",
-        importBeerPrice: "5"
-      }
+      info: this.props.info
     };
     this.handleChange = this.handleChange.bind(this);
     this.setNewValue = this.setNewValue.bind(this);
@@ -70,7 +50,6 @@ export class PointSheetInput extends Component {
     let info = this.state.info;
     let keyNames = Object.keys(info);
     let formGroups = this.generateFormGroups(keyNames)
-    console.log(keyNames)
     return(
       <Form>
         {formGroups}

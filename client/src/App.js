@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Views/Home';
 import List from './Views/List';
-import PointSheetNew from './Views/PointSheetNew';
+import PointSheetPoint from './Views/PointSheetPoint';
 import PointSheetInput from './Views/PointSheetInput';
 import PointSheet from './Views/PointSheet';
 
@@ -26,9 +26,8 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/list' component={List}/>
-          {/* <Route path='/new' component={PointSheetNew}/> */}
+          {/* <Route path='/new' component={PointSheetPoint}/> */}
           {/* <Route path='/input' component={PointSheetInput}/> */}
-          <Route path='/point' component={PointSheet}/>
         </Switch>
       </div>
     )
