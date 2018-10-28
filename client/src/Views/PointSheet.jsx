@@ -19,7 +19,9 @@ export class PointSheet extends Component {
     this.state = {
       activeTab: '1',
       info: default_info,
-      inventory: default_inv
+      inventory: default_inv,
+      "_id": this.props.data["_id"],
+      date: this.props.data["date"]
     };
   }
 
@@ -73,7 +75,7 @@ export class PointSheet extends Component {
   }
 
   handleSave = () => {
-    let data = [this.state.info, this.state.inventory]
+    let data = [this.state.info, this.state.inventory, this.state["_id"], this.state.date]
     fetch('./savePointsheet', {
       method: "POST",
       headers: {

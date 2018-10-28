@@ -56,9 +56,10 @@ app.post('/submitInventory', (req,res) => {
 
 // On save inventory request, runs a python script that
 // saves the inputted data to the mongoDB database
-app.post('/savePointSheet', (req,res) => {
+app.post('/savePointsheet', (req,res) => {
   console.log('save request received')
-  let data = logData(req.body);
+  let data = req.body;
+  console.log(data)
   res.json(data)
   spawnPythonProcess('save', data);
 });

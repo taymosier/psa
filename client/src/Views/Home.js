@@ -37,7 +37,7 @@ class Home extends Component {
     this.setState({
       data: {
         info: default_info,
-        inventory: default_inv
+        inventory: default_inv,
       }
     });
   }
@@ -82,8 +82,8 @@ class Home extends Component {
   updateInfo(data){
     this.setState({
       data: {
-        info: data,
-        inventory: this.state.data.inventory
+        info: data
+        // inventory: this.state.data.inventory
       }
     })
   }
@@ -91,7 +91,7 @@ class Home extends Component {
   updateInventory(data){
     this.setState({
       data: {
-        info: this.state.data.info,
+        // info: this.state.data.info,
         inventory: data
       }
     })
