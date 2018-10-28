@@ -14,8 +14,8 @@ export default class PointSheetListOption extends Component {
   componentDidUpdate(){
     { this.props.option === ''
       ? this.setState({
-        value: this.props.option
-      })
+          value: this.props.option
+        })
       : null
     }
   }
@@ -24,7 +24,7 @@ export default class PointSheetListOption extends Component {
   render(){
     let value = this.props.value
     return(
-        <option value={value}>{value}</option>
+        <option value={value["_id"]}>{value["Event Number"]}</option>
     )
   }
 }

@@ -6,7 +6,7 @@ export class PointSheetList extends Component {
   constructor(props){
     super(props);
     this.state = {
-      documentDates: '',
+      events: '',
       selectedDocument: '',
       formatted: false
     };
@@ -38,8 +38,8 @@ export class PointSheetList extends Component {
         console.log(error)
       }
     })
-    .then(dateList => this.setState({
-      documentDates: dateList
+    .then(events => this.setState({
+      events: events
     }))
   }
 
@@ -52,8 +52,8 @@ export class PointSheetList extends Component {
 
   render(){
     let documents = [];
-    for(let i=0; i < this.state.documentDates; i++){
-      documents.push(this.state.documentDates[i])
+    for(let i=0; i < this.state.events; i++){
+      documents.push(this.state.events[i])
     }
 
 //TODO only submit the request for a document when the user clicks the
@@ -62,9 +62,9 @@ export class PointSheetList extends Component {
       <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} className={this.props.className}>
         <ModalHeader toggle={this.props.toggle}>Point Sheets</ModalHeader>
         <ModalBody>
-          {this.state.documentDates
+          {this.state.events
             ? <PointSheetListSelect
-                options={this.state.documentDates}
+                options={this.state.events}
                 handleDocumentSelect={this.handleDocumentSelect}
               />
             : null

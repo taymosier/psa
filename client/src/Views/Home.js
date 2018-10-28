@@ -44,6 +44,7 @@ class Home extends Component {
 
   getSelectedDocument = () => {
     let selectedDocument = this.state.selectedDocument;
+    console.log('selectedDocument:')
     console.log(this.state.selectedDocument)
     fetch('./requestDocument', {
       method: "POST",

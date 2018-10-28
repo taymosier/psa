@@ -126,18 +126,37 @@ function printDataToConsole(childProcess, data){
 // data to mongoDB
 app.post('/requestDocument', (req,res) => {
   let selectedDocumentDate = req.body;
+  console.log('Express data received')
   console.log(req.body[0])
   let url = "mongodb://localhost:27017/";
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("gcc");
-    dbo.collection("inventory").findOne({date: `${req.body[0]}`}, function(err, result)
+    const ObjectId = require('mongodb').ObjectID;
+    let id;
+    try {
+      id = req.body[0].toString();
+    } catch(e){
+      console.log(e)
+    }
+    try{
+      id = new ObjectId(id);
+    } catch(e){
+      console.log(e)
+    }
+    dbo.collection("inventory").findOne({"_id": id}, function(err, result)
     {
       if (err) throw err;
-      console.log('Hi there')
-      console.log(result);
-      db.close();
-      res.send(result);
+      if (result === null){
+        console.log('Not Found, result === null')
+        db.close();
+        res.send("Not Found")
+      } else {
+        console.log('/requestDocument result')
+        console.log(result);
+        db.close();
+        res.send(result);
+      }
     });
   });
 })
@@ -145,7 +164,7 @@ app.post('/requestDocument', (req,res) => {
 // Listens for initial document load request, then sends back the five most
 // recent spreadsheets
 app.get('/initialDocLoad', (req, res) => {
-  let dateList = [];
+  let events = [];
   let url = "mongodb://localhost:27017/";
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
@@ -159,15 +178,19 @@ app.get('/initialDocLoad', (req, res) => {
         if(result.length > 0){
           for(let i=0; i < result.length; i++){
             try{
-              dateList.push(result[i]["date"])
+              events.push({
+                "_id": result[i]["_id"],
+                "Event Number": result[i]["info"]["Event Number"]
+              })
             } catch(e){
               console.log(`${i}: `+e)
             }
           }
+          console.log(events)
         }
       }
       db.close();
-      res.send(dateList);
+      res.send(events);
     });
   });
 })
