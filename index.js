@@ -66,7 +66,7 @@ app.post('/savePointsheet', (req,res) => {
 
 
 app.post('/deletePointsheet', (req,res) => {
-  console.log('save request received')
+  console.log('delete request received')
   let data = req.body;
   console.log(data)
   res.json(data)
@@ -87,10 +87,30 @@ function spawnPythonProcess(option, data){
       console.log()
       writeDataToDBAndEmail(spawn, data);
       break;
+    case "delete":
+      console.log('case "delete"')
+      console.log(data)
+      console.log()
+      deleteDocumentFromDB(spawn, data);
+      break;
     default:
       console.log('Bad request received')
       break;
   }
+}
+
+function deleteDocumentFromDB(spawn, data){
+  console.log('Deleting document from database')
+  try{
+    console.log('Data being written')
+    let pythonProcess = spawn('python', ['deleteDocument.py', JSON.stringify(data)], {
+      'cwd': './client'
+    });
+    printDataToConsole(pythonProcess, data)
+  } catch(e){
+    console.log(e)
+  }
+  console.log('python process called/passed')
 }
 
 
