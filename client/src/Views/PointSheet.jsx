@@ -15,6 +15,7 @@ export class PointSheet extends Component {
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSave = this.handleSave.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
 
     this.state = {
       activeTab: '1',
@@ -86,6 +87,20 @@ export class PointSheet extends Component {
     .then((res) => res.json())
   }
 
+  handleDelete = () => {
+    let data = [this.state["_id"]];
+    console.log('ID being passed in delete request')
+    console.log(data)
+    fetch('./deletePointsheet', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then((res) => res.json())
+  }
+
 
 
   render(){
@@ -110,6 +125,9 @@ export class PointSheet extends Component {
           </NavItem>
           <NavItem>
             <Button onClick={this.handleSave}>Save</Button>
+          </NavItem>
+          <NavItem>
+            <Button onClick={this.handleDelete}>Delete</Button>
           </NavItem>
           <NavItem>
             <Button onClick={this.handleSubmit}>Submit</Button>

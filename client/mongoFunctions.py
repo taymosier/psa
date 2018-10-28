@@ -145,3 +145,23 @@ def updateExistingPost(database, collection, data):
     except Exception as e:
       print('Failed to post data to database.')
       print(e)
+
+
+def updateExistingPost(database, collection, data):
+    client = MongoClient('localhost', 27017)
+    gcc_db = client[database]
+    collection_instance = gcc_db[collection]
+    # try:
+    #   collection_instance.replace_one(
+    #     {"_id": data['_id']},
+    #     {
+    #         "_id": data["_id"],
+    #         "info": data["info"],
+    #         "inventory": data["inventory"],
+    #         "date": data["date"]
+    #     },
+    #     True)
+      print('Post inserted to database ' + database + ' in collection ' + collection + '.')
+    except Exception as e:
+      print('Failed to post data to database.')
+      print(e)

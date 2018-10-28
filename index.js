@@ -64,6 +64,15 @@ app.post('/savePointsheet', (req,res) => {
   spawnPythonProcess('save', data);
 });
 
+
+app.post('/deletePointsheet', (req,res) => {
+  console.log('save request received')
+  let data = req.body;
+  console.log(data)
+  res.json(data)
+  spawnPythonProcess('delete', data);
+});
+
 //Determines which python script to run
 function spawnPythonProcess(option, data){
   console.log('Spawning python process')
