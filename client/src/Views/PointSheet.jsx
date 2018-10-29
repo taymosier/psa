@@ -19,6 +19,7 @@ export class PointSheet extends Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.handleConfirmation = this.handleConfirmation.bind(this);
     this.setPointSheetEmailState = this.setPointSheetEmailState.bind(this)
+    this.closeModal = this.closeModal.bind(this)
 
     this.state = {
       activeTab: '1',
@@ -54,6 +55,12 @@ export class PointSheet extends Component {
         activeTab: tab
       });
     }
+  }
+
+  closeModal(){
+    this.setState({
+      toggleEmailModal: false
+    })
   }
 
   handleInputChange(data){
@@ -162,7 +169,7 @@ export class PointSheet extends Component {
             </Link>
           </NavItem>
         </Nav>
-        <EmailModal toggle={this.state.toggleEmailModal} setParentComponentEmailState={this.setPointSheetEmailState}/>
+        <EmailModal toggle={this.state.toggleEmailModal} closeModal={this.closeModal} setParentComponentEmailState={this.setPointSheetEmailState}/>
         <TabContent activeTab={this.state.activeTab}>
         <TabPane tabId="1">
           <Row>

@@ -31,7 +31,7 @@ export class EmailModal extends Component {
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={this.submitEmail}>Select</Button>{' '}
-          <Button color="secondary" onClick={this.props.toggle}>Cancel</Button>
+          <Button color="secondary" onClick={this.props.closeModal}>Cancel</Button>
         </ModalFooter>
       </Modal>
     )
