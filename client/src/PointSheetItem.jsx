@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Col, Row, FormGroup, Label, Input} from 'reactstrap';
-import './styles/pointSheetItem.css'
 
 
 export class PointSheetItem extends Component {
