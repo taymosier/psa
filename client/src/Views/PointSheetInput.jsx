@@ -91,7 +91,7 @@ export class PointSheetInput extends Component {
     let keyNames = Object.keys(info);
     let formGroups = this.generateFormGroups(keyNames)
     return(
-      <Form>
+      <Form className={"inputForm"}>
         {formGroups}
       </Form>
     );

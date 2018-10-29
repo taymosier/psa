@@ -30,7 +30,7 @@ export class EmailModal extends Component {
           <EmailInput handleChange={this.handleChange}/>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.submitEmail}>Select</Button>{' '}
+          <Button color="primary" onClick={this.submitEmail}>Submit</Button>{' '}
           <Button color="secondary" onClick={this.props.closeModal}>Cancel</Button>
         </ModalFooter>
       </Modal>

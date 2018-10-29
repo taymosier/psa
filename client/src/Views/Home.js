@@ -6,6 +6,8 @@ import { Button } from 'reactstrap';
 import {default_info} from './default_info';
 import {default_inv} from './default_inventory';
 
+import '../styles/Home.css';
+
 
 
 class Home extends Component {
@@ -102,13 +104,14 @@ class Home extends Component {
     <div className="App">
       {this.state.data !== ''
        ?<div><PointSheet className={"pointsheet"} data={this.state.data} clearData={this.clearData} updateInfo={this.updateInfo} updateInventory={this.updateInventory}/></div>
-       :<div>
-          <h1>GCC PointSheets</h1>
-          <Button className={"newPointSheetBtn"} onClick={this.getNewPointSheet}>
+       :<div className={"homeOptionsView"}>
+          <h1 className={"homeHeader"}>GCC Point Sheets</h1>
+          <Button size="lg" className={"newPointSheetBtn"} onClick={this.getNewPointSheet}>
             New Point Sheet
           </Button>
-          <Button className={"pointSheetListBtn"} onClick={this.toggle}>Point Sheet List</Button>
-          <PointSheetList className={"pointSheetList"}
+          <Button className={"pointSheetListBtn"} size="lg" onClick={this.toggle}>Point Sheet List</Button>
+          <PointSheetList
+            className={"pointSheetList"}
             passSelectedDocument={this.passSelectedDocument}
             isOpen={this.state.modal}
             toggle={this.toggle}

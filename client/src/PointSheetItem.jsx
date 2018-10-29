@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row, FormGroup, Label, Input} from 'reactstrap';
-import './styles/PointSheetItem.css'
+import './styles/pointSheetItem.css'
 
 
 export class PointSheetItem extends Component {
@@ -87,11 +87,11 @@ export class PointSheetItem extends Component {
     var labelClass = condensedName+"Label";
 
     return(
-      <FormGroup>
+      <FormGroup >
         <Row>
-          <Col xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 6, offset: 2}}>
+          <Col className={"inventoryProductLabelCntr"}xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 5, offset: 0}}>
             <Label for={this.state.name} className={labelClass}>{this.state.name}</Label>
-            <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
+            <Col className={"productInventoryIssuedColumn"} xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 12, offset: 0}}>
               <Input
                 type='number'
                 name="issued"
@@ -101,8 +101,6 @@ export class PointSheetItem extends Component {
                 onChange={this.handleAmountIssuedChanged}
                 onBlur={this.formatIssuedInputValue}
               />
-            </Col>
-            <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 9, offset: 9}}>
               <Input
                 type='number'
                 name='returned'

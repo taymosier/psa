@@ -1,0 +1,15 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: lightslategrey;
+}
+
+.appContainer {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.App {
+  margin: 0;
+}

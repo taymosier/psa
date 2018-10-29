@@ -7,6 +7,8 @@ import PointSheetPoint from './Views/PointSheetPoint';
 import PointSheetInput from './Views/PointSheetInput';
 import PointSheet from './Views/PointSheet';
 
+import './styles/default.css'
+
 
 // TODO
 // Write submitButton handler
@@ -22,7 +24,7 @@ import PointSheet from './Views/PointSheet';
 class App extends Component {
   render() {
     const App = () => (
-      <div>
+      <div className={"appContainer"}>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/list' component={List}/>

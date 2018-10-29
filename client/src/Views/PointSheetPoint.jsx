@@ -6,17 +6,11 @@ import { SearchFilter } from '../SearchFilter';
 import { handleSearch } from '../search/searchFunction.js';
 import { Button, Form } from 'reactstrap';
 
-//TODO
-//Send form data from express server to python script
-//Email form to designated address
+import '../styles/pointSheet.css';
 
 // TODO LATER
-// Add validation for
-// Add database support
+// Add validation for inputs
 // Round up input values to the nearest .1
-// Split the inventory array into separate beer, wine, and liquor arrays
-// --- can run separate loops when writing data into python file for the separate sections
-//     on the actual spreadsheet
 
 
 export class PointSheetPoint extends Component {
@@ -63,7 +57,7 @@ export class PointSheetPoint extends Component {
       <div className="pointSheetContainer">
         <SearchFilter handleSearch={this.handleSearch}/>
         {this.state.inventory !== ''
-          ? <Form>
+          ? <Form className={'inventoryForm'}>
               <PointSheetInventoryList inventory={this.state.inventory} setPointSheet={this.setPointSheet}/>
             </Form>
           : null

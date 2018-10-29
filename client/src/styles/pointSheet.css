@@ -1,0 +1,230 @@
+.inputNavLink {
+  margin: 0 0 0 20px;
+  color: mintcream;
+  border-radius: 7.5%;
+  min-width: 40vw;
+  min-height: 75px;
+  padding: 5px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  border: none;
+  letter-spacing: 4px;
+  box-shadow: 0px 1px 1px 2px mintcream;
+}
+
+.pointNavLink {
+  margin: 0 0 0 20px;
+  color: mintcream;
+  border-radius: 7.5%;
+  min-width: 40vw;
+  min-height: 75px;
+  padding: 5px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  border: none;
+  letter-spacing: 4px;
+  box-shadow: 0px 1px 1px 2px mintcream;
+}
+
+.inventoryProductLabelCntr {
+
+}
+
+.inventoryProductLabelCntr label{
+  font-weight: 700;
+}
+
+.inventoryInfoLabelCntr {
+
+}
+
+.emailModal {
+  position: fixed;
+  top: 40vh;
+  min-width: 90vw;
+}
+
+.emailModal .close {
+  display: none;
+}
+
+.emailModal .modal-header {
+  padding: 10px 0 0 200px;
+}
+
+.emailModal .modal-title {
+  font-weight: 700;
+  font-family: "Segoe UI", sans-serif
+}
+
+.emailModal .modal-body {
+
+}
+
+.emailModal .modal-body .emailAddressInput{
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 0 0 20px;
+  color: midnightblue;
+  letter-spacing: 2px;
+}
+
+.emailModal .modal-footer {
+
+}
+
+.emailModal .modal-footer button{
+  min-width: 130px;
+  font-size:  24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.inventoryInfoLabelCntr label{
+  margin: 0 15px 0 35px;
+  padding: 10px 0px 0 5px;
+  font-size: 20px;
+  font-weight: 700;
+  min-height: 80px;
+  min-width: 140px;
+  max-width: 140px;
+  letter-spacing: 2px;
+}
+
+.inventoryInfoLabelCntr input{
+  margin: 10px 0 0 0;
+  min-height: 55px;
+}
+
+
+
+.pointSheetNav {
+  position: fixed;
+  padding: 30px 0 20px 0;
+  background-color: lightslategrey;
+  z-index: 10000;
+  margin: 35px 0 0 0;
+}
+
+.pointSheetNav .nav-item button {
+  min-width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+
+.saveNavItem {
+  min-width: 85px;
+  margin: 2.5vh 0 2.5vh 2.5vw;
+}
+
+.saveNavItem button {
+  background-color: orangered;
+  border-radius: 15%;
+  border: 0px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+
+.deleteNavItem {
+  min-width: 85px;
+  margin: 2.5vh 0 2.5vh 2.5vw;
+}
+
+.deleteNavItem button {
+  background-color: darkred;
+  border-radius: 15%;
+  border: 0px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+
+.submitNavItem {
+  min-width: 85px;
+  margin: 2.5vh 0 2.5vh 2.5vw;
+}
+
+.submitNavItem button{
+  background-color: green;
+  border-radius: 15%;
+  border: 0px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+
+.homeNavItem {
+  min-width: 85px;
+  margin: 2.5vh 0 2.5vh 2.5vw;
+
+}
+
+.homeNavItem button{
+  background-color: midnightblue;
+  border-radius: 15%;
+  border: 0px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+
+.inputForm {
+  margin: 200px 0 0 0;
+}
+
+.inputForm .form-group {
+  min-height: 7.5vh;
+  background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
+}
+
+.inputForm .form-group label {
+  color: mintcream;
+}
+
+.inputForm .form-group .row {
+  min-height: 70px;
+  max-height: auto
+}
+
+.inventoryForm {
+  padding: 150px 0 0 0;
+}
+
+.pointSheetContainer {
+  padding: 0;
+  margin: 170px 0 0 0;
+}
+
+.pointSheetContainer form label {
+  font-size: 24px;
+  min-width: 42.5vw;
+  margin: 0 0 0 0;
+  padding: 15% 1vw 0 5vw;
+}
+
+.pointSheetContainer form input {
+  min-width: 35vw;
+  margin: 0 0 0 0vw;
+  font-size: 30px;
+  min-height: 10vh;
+}
+
+.productInventoryIssuedColumn {
+    min-width: 50vw;
+    margin: 0 0 0 45vw;
+    min-height: 10vh;
+}
+
+.productInventoryReturnedColumn {
+    min-width: 50vw;
+    margin: 0 0 0 45vw;
+    min-height: 10vh;
+}
+
+.searchFltCntr  {
+  min-width: 100vw;
+  position: fixed !important;
+  background: white;
+  z-index: 10000;
+  top: 200px;
+}
+
+.searchFltLabel {
+  font-size: 24px;
+  padding: 0 0 0 0;
+  margin: 0;
+}

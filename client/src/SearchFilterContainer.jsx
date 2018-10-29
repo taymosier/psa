@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchFilter from './SearchFilter.jsx';
+import './styles/pointSheet.css'
 
 export default class SearchFilterContainer extends Component {
   constructor(props){

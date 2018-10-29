@@ -7,6 +7,9 @@ import { EmailModal } from './EmailModal'
 import {default_info} from './default_info';
 import {default_inv} from './default_inventory';
 
+import '../styles/pointSheet.css';
+
+
 
 export class PointSheet extends Component {
   constructor(props){
@@ -135,8 +138,8 @@ export class PointSheet extends Component {
   render(){
     return(
       <div className="pointSheet">
-        <Nav tabs>
-          <NavItem>
+        <Nav className={"pointSheetNav"} tabs>
+          <NavItem className="inputNavLink">
             <NavLink
               className={this.state.activeTab}
               onClick={() => { this.toggle('1'); }}
@@ -144,7 +147,7 @@ export class PointSheet extends Component {
               Input
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="pointNavLink">
             <NavLink
             className={this.state.activeTab}
             onClick={() => { this.toggle('2'); }}
@@ -152,16 +155,16 @@ export class PointSheet extends Component {
               Point
             </NavLink>
           </NavItem>
-          <NavItem>
-            <Button onClick={this.handleSave}>Save</Button>
-          </NavItem>
-          <NavItem>
+          <NavItem className={"deleteNavItem"}>
             <Button onClick={this.handleDelete}>Delete</Button>
           </NavItem>
-          <NavItem>
-            <Button onClick={this.handleConfirmation}>Submit</Button>
+          <NavItem className={"saveNavItem"}>
+            <Button onClick={this.handleSave}>Save</Button>
           </NavItem>
-          <NavItem>
+          <NavItem className={"submitNavItem"}>
+            <Button onClick={this.handleConfirmation}>Submit</Button>
+          </NavItem >
+          <NavItem className={"homeNavItem"}>
             <Link to={'./'}>
               <Button onClick={this.props.clearData}>
                  Home
@@ -169,12 +172,21 @@ export class PointSheet extends Component {
             </Link>
           </NavItem>
         </Nav>
-        <EmailModal toggle={this.state.toggleEmailModal} closeModal={this.closeModal} setParentComponentEmailState={this.setPointSheetEmailState}/>
+        <EmailModal
+          className={"emailModal"}
+          toggle={this.state.toggleEmailModal}
+          closeModal={this.closeModal}
+          setParentComponentEmailState={this.setPointSheetEmailState}
+        />
         <TabContent activeTab={this.state.activeTab}>
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
-              <PointSheetInput handleInputChange={this.handleInputChange} info={this.props.data.info} setParentComponentEmailState={this.setPointSheetEmailState}/>
+              <PointSheetInput
+                handleInputChange={this.handleInputChange}
+                info={this.props.data.info}
+                setParentComponentEmailState={this.setPointSheetEmailState}
+              />
             </Col>
           </Row>
         </TabPane>
