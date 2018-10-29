@@ -6,7 +6,7 @@ import { Button } from 'reactstrap';
 import {default_info} from './default_info';
 import {default_inv} from './default_inventory';
 
-import '../styles/Home.css';
+import '../styles/home.css';
 
 
 
