@@ -101,14 +101,14 @@ class Home extends Component {
     return (
     <div className="App">
       {this.state.data !== ''
-       ?<div><PointSheet data={this.state.data} clearData={this.clearData} updateInfo={this.updateInfo} updateInventory={this.updateInventory}/></div>
+       ?<div><PointSheet className={"pointsheet"} data={this.state.data} clearData={this.clearData} updateInfo={this.updateInfo} updateInventory={this.updateInventory}/></div>
        :<div>
-          <h1>Point Sheet Home</h1>
-          <Button onClick={this.getNewPointSheet}>
+          <h1>GCC PointSheets</h1>
+          <Button className={"newPointSheetBtn"} onClick={this.getNewPointSheet}>
             New Point Sheet
           </Button>
-          <Button variant="raised" onClick={this.toggle}>Point Sheet List</Button>
-          <PointSheetList
+          <Button className={"pointSheetListBtn"} onClick={this.toggle}>Point Sheet List</Button>
+          <PointSheetList className={"pointSheetList"}
             passSelectedDocument={this.passSelectedDocument}
             isOpen={this.state.modal}
             toggle={this.toggle}
