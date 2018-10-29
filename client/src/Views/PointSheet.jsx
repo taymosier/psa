@@ -7,7 +7,8 @@ import { EmailModal } from './EmailModal'
 import {default_info} from './default_info';
 import {default_inv} from './default_inventory';
 
-import '../styles/pointSheet.css';
+require('../styles/pointSheet.css')
+
 
 
 

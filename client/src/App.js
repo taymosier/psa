@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
+
 import Home from './Views/Home';
 import List from './Views/List';
 import PointSheetPoint from './Views/PointSheetPoint';
 import PointSheetInput from './Views/PointSheetInput';
 import PointSheet from './Views/PointSheet';
 
-import './styles/default.css'
 
 
 // TODO

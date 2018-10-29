@@ -87,29 +87,26 @@ export class PointSheetItem extends Component {
     return(
       <FormGroup >
         <Row>
-          <Col className={"inventoryProductLabelCntr"}xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 5, offset: 0}}>
+          <Col className={"inventoryProductLabelCntr"}xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label for={this.state.name} className={labelClass}>{this.state.name}</Label>
-            <Col className={"productInventoryIssuedColumn"} xl="4" lg="4" md="4" sm={{ size: 3, offset: 6}} xs={{ size: 12, offset: 0}}>
-              <Input
-                type='number'
-                name="issued"
-                id={amountIssued}
-                placeholder="issued"
-                value={this.state.quantity.issued}
-                onChange={this.handleAmountIssuedChanged}
-                onBlur={this.formatIssuedInputValue}
-              />
-              <Input
-                type='number'
-                name='returned'
-                id={amountReturned}
-                placeholder="returned"
-                value={this.state.quantity.returned}
-                onChange={this.handleAmountReturnedChanged}
-                onBlur={this.formatReturnedInputValue}
-
-              />
-            </Col>
+            <Input
+              type='number'
+              name="issued"
+              id={amountIssued}
+              placeholder="issued"
+              value={this.state.quantity.issued}
+              onChange={this.handleAmountIssuedChanged}
+              onBlur={this.formatIssuedInputValue}
+            />
+            <Input
+              type='number'
+              name='returned'
+              id={amountReturned}
+              placeholder="returned"
+              value={this.state.quantity.returned}
+              onChange={this.handleAmountReturnedChanged}
+              onBlur={this.formatReturnedInputValue}
+            />
           </Col>
         </Row>
 

@@ -3,7 +3,6 @@ import { inventory } from '../alcohol';
 import { PointSheetItem } from '../PointSheetItem';
 import { PointSheetInventoryList } from './PointSheetInventoryList';
 import { SearchFilter } from '../SearchFilter';
-import { handleSearch } from '../search/searchFunction.js';
 import { Button, Form } from 'reactstrap';
 
 import '../styles/pointSheet.css';
@@ -20,7 +19,7 @@ export class PointSheetPoint extends Component {
       search: '',
       inventory: ''
     };
-    this.handleSearch = handleSearch.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
     this.setPointSheet = this.setPointSheet.bind(this);
   }
 
@@ -31,6 +30,15 @@ export class PointSheetPoint extends Component {
       })
     }
   }
+
+  handleSearch(e){
+    e.preventDefault();
+    console.log(e);
+    this.setState({
+      search: e.target.value.toLowerCase(),
+    })
+  }
+
 
 
   setPointSheet(inventory){
@@ -58,7 +66,7 @@ export class PointSheetPoint extends Component {
         <SearchFilter handleSearch={this.handleSearch}/>
         {this.state.inventory !== ''
           ? <Form className={'inventoryForm'}>
-              <PointSheetInventoryList inventory={this.state.inventory} setPointSheet={this.setPointSheet}/>
+              <PointSheetInventoryList inventory={inventoryCopy} setPointSheet={this.setPointSheet}/>
             </Form>
           : null
         }

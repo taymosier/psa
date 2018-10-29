@@ -27,7 +27,7 @@
 }
 
 .inventoryProductLabelCntr {
-
+  background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
 }
 
 .inventoryProductLabelCntr label{
@@ -83,17 +83,30 @@
 
 .inventoryInfoLabelCntr label{
   margin: 0 15px 0 35px;
-  padding: 10px 0px 0 5px;
+  padding: 10px 0px 10px 5px;
   font-size: 20px;
   font-weight: 700;
   min-height: 80px;
   min-width: 140px;
   max-width: 140px;
   letter-spacing: 2px;
+  color: mintcream;
 }
 
 .inventoryInfoLabelCntr input{
+  margin: 0 15px 0 35px;
+  padding: 10px 0px 10px 5px;
+  font-size: 20px;
+  font-weight: 700;
+  min-height: 50px;
+  min-width: 80px;
+  max-width: 140px;
+  letter-spacing: 2px;
+}
+
+.form-control {
   margin: 10px 0 0 0;
+  padding: 2px 0px 2px 10px;
   min-height: 55px;
 }
 
@@ -119,7 +132,6 @@
 }
 
 .saveNavItem button {
-  background-color: orangered;
   border-radius: 15%;
   border: 0px;
   box-shadow: 1px 1px 3px 1px black;
@@ -131,7 +143,6 @@
 }
 
 .deleteNavItem button {
-  background-color: darkred;
   border-radius: 15%;
   border: 0px;
   box-shadow: 1px 1px 3px 1px black;
@@ -143,7 +154,6 @@
 }
 
 .submitNavItem button{
-  background-color: green;
   border-radius: 15%;
   border: 0px;
   box-shadow: 1px 1px 3px 1px black;
@@ -156,23 +166,18 @@
 }
 
 .homeNavItem button{
-  background-color: midnightblue;
   border-radius: 15%;
   border: 0px;
   box-shadow: 1px 1px 3px 1px black;
 }
 
 .inputForm {
-  margin: 200px 0 0 0;
+  margin: 215px 0 0 0;
 }
 
 .inputForm .form-group {
   min-height: 7.5vh;
   background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
-}
-
-.inputForm .form-group label {
-  color: mintcream;
 }
 
 .inputForm .form-group .row {
@@ -184,6 +189,10 @@
   padding: 150px 0 0 0;
 }
 
+.inventoryForm {
+
+}
+
 .pointSheetContainer {
   padding: 0;
   margin: 170px 0 0 0;
@@ -191,14 +200,18 @@
 
 .pointSheetContainer form label {
   font-size: 24px;
-  min-width: 42.5vw;
-  margin: 0 0 0 0;
-  padding: 15% 1vw 0 5vw;
+  min-width: 185px;
+  float: left;
+  min-height: 100%;
+  max-width: 45vw;
+  margin: 0;
+  padding: 10% 1vw 0 5vw;
 }
 
 .pointSheetContainer form input {
-  min-width: 35vw;
-  margin: 0 0 0 0vw;
+  min-width: 20vw;
+  max-width: 40vw;
+  margin: 0 0 0vw;
   font-size: 30px;
   min-height: 10vh;
 }
@@ -217,10 +230,18 @@
 
 .searchFltCntr  {
   min-width: 100vw;
+  min-height: 80px;
   position: fixed !important;
   background: white;
   z-index: 10000;
-  top: 200px;
+  top: 215px;
+  background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
+}
+
+.searchFltCntr input {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1.35px;
 }
 
 .searchFltLabel {
