@@ -3,6 +3,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 're
 import { Link } from 'react-router-dom';
 import { PointSheetPoint } from './PointSheetPoint';
 import { PointSheetInput } from './PointSheetInput';
+import { EmailModal } from './EmailModal'
 import {default_info} from './default_info';
 import {default_inv} from './default_inventory';
 
@@ -16,14 +17,19 @@ export class PointSheet extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleConfirmation = this.handleConfirmation.bind(this);
+    this.setPointSheetEmailState = this.setPointSheetEmailState.bind(this)
 
     this.state = {
       activeTab: '1',
       info: default_info,
       inventory: default_inv,
       "_id": this.props.data["_id"],
-      date: this.props.data["date"]
+      date: this.props.data["date"],
+      email: '',
+      toggleEmailModal: false
     };
+
   }
 
   componentDidMount(){
@@ -33,6 +39,12 @@ export class PointSheet extends Component {
         info: this.props.data['info'],
         inventory: this.props.data['inventory']
       });
+    }
+  }
+
+  componentDidUpdate(){
+    if(this.state.email !== ''){
+      this.handleSubmit();
     }
   }
 
@@ -58,13 +70,12 @@ export class PointSheet extends Component {
     this.props.updateInventory(data);
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    this.sendList();
+  handleSubmit(){
+    this.sendPointSheet();
   }
 
-  sendList = () => {
-    let data = [this.state.info, this.state.inventory]
+  sendPointSheet = () => {
+    let data = [this.state.info, this.state.inventory, this.state.email]
     fetch('./submitInventory', {
       method: "POST",
       headers: {
@@ -101,7 +112,18 @@ export class PointSheet extends Component {
     .then((res) => res.json())
   }
 
+  handleConfirmation(){
+    this.setState({
+      toggleEmailModal: !this.state.toggleEmailModal
+    });
+  }
 
+  setPointSheetEmailState(value){
+    this.setState({
+      email: value,
+      toggleEmailModal: false
+    });
+  }
 
   render(){
     return(
@@ -130,7 +152,7 @@ export class PointSheet extends Component {
             <Button onClick={this.handleDelete}>Delete</Button>
           </NavItem>
           <NavItem>
-            <Button onClick={this.handleSubmit}>Submit</Button>
+            <Button onClick={this.handleConfirmation}>Submit</Button>
           </NavItem>
           <NavItem>
             <Link to={'./'}>
@@ -140,12 +162,12 @@ export class PointSheet extends Component {
             </Link>
           </NavItem>
         </Nav>
-
+        <EmailModal toggle={this.state.toggleEmailModal} setParentComponentEmailState={this.setPointSheetEmailState}/>
         <TabContent activeTab={this.state.activeTab}>
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
-              <PointSheetInput handleInputChange={this.handleInputChange} info={this.props.data.info}/>
+              <PointSheetInput handleInputChange={this.handleInputChange} info={this.props.data.info} setParentComponentEmailState={this.setPointSheetEmailState}/>
             </Col>
           </Row>
         </TabPane>

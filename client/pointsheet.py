@@ -12,8 +12,9 @@ f = sys.argv[1]
 obj = json.loads(f)
 info = obj[0]
 alcohol = obj[1]
+email = obj[2]
 print('Data fed to python')
-print(obj)
+print(email)
 wb = openpyxl.load_workbook('GCC Point Sheet Template 2015.06.19.xlsx')
 inputSheet = wb['Input']
 pointSheet = wb['Point']
@@ -39,7 +40,7 @@ except:
     print('Failed to save spreadsheet')
 
 try:
-    getEmailInformation('taymosier@gmail.com', 'W1nter!!!!', 'tamosier@ncsu.edu', 'Function', 'test.xlsx')
+    getEmailInformation('taymosier@gmail.com', 'W1nter!!!!', email, 'Dynamic Email Test', 'test.xlsx')
     print('info posted')
 except:
     print('Email failed to send')

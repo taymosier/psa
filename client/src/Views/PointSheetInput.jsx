@@ -58,10 +58,7 @@ export class PointSheetInput extends Component {
     let sortedKeys = Object.keys(sortedFields);
     sortedKeys.map(key => {
       sortedFields[key] = info[key]
-      console.log(sortedFields[key])
     })
-    console.log('\nsorted keys')
-    console.log(sortedFields)
     return sortedFields
   }
 
