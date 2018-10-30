@@ -5,11 +5,16 @@
   min-width: 40vw;
   min-height: 75px;
   padding: 5px 0 0 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 300;
   border: none;
-  letter-spacing: 4px;
-  box-shadow: 0px 1px 1px 2px mintcream;
+  letter-spacing: 3px;
+  box-shadow: 0px 1px 12.5px 2px black;
+}
+
+.inputNavLink a {
+  text-align: center;
+  padding: 0;
 }
 
 .pointNavLink {
@@ -19,11 +24,16 @@
   min-width: 40vw;
   min-height: 75px;
   padding: 5px 0 0 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 300;
   border: none;
-  letter-spacing: 4px;
-  box-shadow: 0px 1px 1px 2px mintcream;
+  letter-spacing: 3px;
+  box-shadow: 0px 1px 12.5px 2px black;
+}
+
+.pointNavLink a {
+  text-align: center;
+  padding: 0;
 }
 
 .inventoryProductLabelCntr {
@@ -85,7 +95,7 @@
   margin: 0 15px 0 35px;
   padding: 10px 0px 10px 5px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 300;
   min-height: 80px;
   min-width: 140px;
   max-width: 140px;
@@ -117,13 +127,20 @@
   padding: 30px 0 20px 0;
   background-color: lightslategrey;
   z-index: 10000;
-  margin: 35px 0 0 0;
+  margin: 0 0 0 0;
+  box-shadow: 0px 0px 20px 2.5px;
+}
+
+.pointSheetNav .nav .nav-tabs {
+  border: none;
 }
 
 .pointSheetNav .nav-item button {
   min-width: 100%;
   letter-spacing: 1.5px;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 4px 3px;
 }
 
 .saveNavItem {
@@ -172,12 +189,13 @@
 }
 
 .inputForm {
-  margin: 215px 0 0 0;
+  margin: 250px 0 0 0;
 }
 
 .inputForm .form-group {
   min-height: 7.5vh;
   background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
+  box-shadow: 0 3px 10px 1px;
 }
 
 .inputForm .form-group .row {
