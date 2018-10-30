@@ -233,6 +233,9 @@
 .pointSheetContainer form label {
   font-size: 24px;
   min-width: 185px;
+  color: mintcream;
+  letter-spacing: 1.15px;
+  font-weight: 300;
   float: left;
   min-height: 100%;
   max-width: 45vw;
@@ -244,7 +247,7 @@
   min-width: 20vw;
   max-width: 40vw;
   margin: 0 0 0vw;
-  font-size: 30px;
+  font-size: 28px;
   min-height: 10vh;
 }
 
