@@ -158,7 +158,7 @@
 }
 
 .saveNavItem {
-  min-width: 85px;
+  min-width: 75px;
   margin: 2.5vh 0 2.5vh 2.5vw;
 }
 
@@ -169,8 +169,8 @@
 }
 
 .deleteNavItem {
-  min-width: 85px;
-  margin: 2.5vh 0 2.5vh 2.5vw;
+  min-width: 75px;
+  margin: 2.5vh 0 2.5vh 20px;
 }
 
 .deleteNavItem button {
@@ -180,7 +180,7 @@
 }
 
 .submitNavItem {
-  min-width: 85px;
+  min-width: 75px;
   margin: 2.5vh 0 2.5vh 2.5vw;
 }
 
@@ -191,7 +191,7 @@
 }
 
 .homeNavItem {
-  min-width: 85px;
+  min-width: 75px;
   margin: 2.5vh 0 2.5vh 2.5vw;
 
 }
