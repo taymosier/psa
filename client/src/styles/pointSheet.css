@@ -59,7 +59,17 @@
 }
 
 .emailModal .modal-header {
-  padding: 10px 0 0 200px;
+  padding: 10px 0 0 160px;
+}
+
+.emailModal .modal-header .modal-title {
+  font-weight: 300;
+  font-size: 28px;
+  color: mintcream;
+}
+
+.emailModal .modal-content {
+  background-color: lightslategray;
 }
 
 .emailModal .modal-title {
@@ -68,7 +78,11 @@
 }
 
 .emailModal .modal-body {
+}
 
+.emailModal .modal-body input{
+  font-size: 22px;
+  letter-spacing: 1.15px;
 }
 
 .emailModal .modal-body .emailAddressInput{
@@ -87,7 +101,7 @@
 .emailModal .modal-footer button{
   min-width: 130px;
   font-size:  24px;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 
@@ -98,7 +112,7 @@
   font-weight: 300;
   min-height: 80px;
   min-width: 140px;
-  max-width: 140px;
+  max-width: 185px;
   letter-spacing: 2px;
   color: mintcream;
 }
@@ -252,7 +266,8 @@
   position: fixed !important;
   background: white;
   z-index: 10000;
-  top: 215px;
+  top: 200px;
+  box-shadow: 0 2px 10px 1.5px;
   background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
 }
 
