@@ -140,22 +140,6 @@ export class PointSheet extends Component {
     return(
       <div className="pointSheet">
         <Nav className={"pointSheetNav"} tabs>
-          <NavItem className="inputNavLink">
-            <NavLink
-              className={this.state.activeTab}
-              onClick={() => { this.toggle('1'); }}
-            >
-              Input
-            </NavLink>
-          </NavItem>
-          <NavItem className="pointNavLink">
-            <NavLink
-            className={this.state.activeTab}
-            onClick={() => { this.toggle('2'); }}
-            >
-              Point
-            </NavLink>
-          </NavItem>
           <NavItem className={"deleteNavItem"}>
             <Button onClick={this.handleDelete}>Delete</Button>
           </NavItem>
@@ -171,6 +155,22 @@ export class PointSheet extends Component {
                  Home
               </Button>
             </Link>
+          </NavItem>
+          <NavItem className="inputNavLink">
+            <NavLink
+              className={this.state.activeTab}
+              onClick={() => { this.toggle('1'); }}
+            >
+              Input
+            </NavLink>
+          </NavItem>
+          <NavItem className="pointNavLink">
+            <NavLink
+            className={this.state.activeTab}
+            onClick={() => { this.toggle('2'); }}
+            >
+              Point
+            </NavLink>
           </NavItem>
         </Nav>
         <EmailModal

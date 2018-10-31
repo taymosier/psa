@@ -1,8 +1,8 @@
 .inputNavLink {
-  margin: 0 0 0 20px;
+  margin: 25px 0 0 60px;
   color: mintcream;
   border-radius: 7.5%;
-  min-width: 40vw;
+  min-width: 120px;
   min-height: 30px;
   max-height: 50px;
   padding: 5px 0 0 0;
@@ -20,10 +20,10 @@
 }
 
 .pointNavLink {
-  margin: 0 0 0 20px;
+  margin: 25px 0 0 30px;
   color: mintcream;
   border-radius: 7.5%;
-  min-width: 40vw;
+  min-width: 120px;
   min-height: 50px;
   max-height: 50px;
   padding: 5px 0 0 0;
@@ -159,7 +159,7 @@
 
 .saveNavItem {
   min-width: 75px;
-  margin: 2.5vh 0 2.5vh 2.5vw;
+  margin: 0 0 2.5vh 2.5vw;
 }
 
 .saveNavItem button {
@@ -170,7 +170,7 @@
 
 .deleteNavItem {
   min-width: 75px;
-  margin: 2.5vh 0 2.5vh 20px;
+  margin: 0 0 2.5vh 20px;
 }
 
 .deleteNavItem button {
@@ -181,7 +181,7 @@
 
 .submitNavItem {
   min-width: 75px;
-  margin: 2.5vh 0 2.5vh 2.5vw;
+  margin: 0 0 2.5vh 2.5vw;
 }
 
 .submitNavItem button{
@@ -192,7 +192,7 @@
 
 .homeNavItem {
   min-width: 75px;
-  margin: 2.5vh 0 2.5vh 2.5vw;
+  margin: 0 0 2.5vh 2.5vw;
 
 }
 
@@ -221,8 +221,8 @@
   padding: 150px 0 0 0;
 }
 
-.inventoryForm {
-
+.inventoryForm .form-group{
+  box-shadow: 0 3px 10px 1px;
 }
 
 .pointSheetContainer {
@@ -265,7 +265,7 @@
 
 .searchFltCntr  {
   min-width: 100vw;
-  min-height: 60px;
+  min-height: 50px;
   position: fixed !important;
   background: white;
   z-index: 10000;
@@ -278,7 +278,8 @@
 }
 
 .searchFltCntr input {
-  font-size: 22px;
+  margin: 5px 0 0 0;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 1.35px;
 }
