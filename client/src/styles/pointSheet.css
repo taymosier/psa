@@ -231,7 +231,7 @@
 }
 
 .pointSheetContainer form label {
-  font-size: 24px;
+  font-size: 16px;
   min-width: 185px;
   color: mintcream;
   letter-spacing: 1.15px;
@@ -240,15 +240,15 @@
   min-height: 100%;
   max-width: 45vw;
   margin: 0;
-  padding: 10% 1vw 0 5vw;
+  padding: 10px 10vw 0 45px
 }
 
 .pointSheetContainer form input {
   min-width: 20vw;
   max-width: 40vw;
   margin: 0 0 0vw;
-  font-size: 28px;
-  min-height: 10vh;
+  font-size: 16px;
+  min-height: 30px;
 }
 
 .productInventoryIssuedColumn {
