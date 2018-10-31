@@ -90,7 +90,7 @@ export class PointSheetItem extends Component {
           <Col className={"inventoryProductLabelCntr"}xl="4" lg="4" md="4" sm={{ size: 6, offset: 3}} xs={{ size: 12, offset: 0}}>
             <Label for={this.state.name} className={labelClass}>{this.state.name}</Label>
             <Input
-              type='number'
+              type='tel'
               step="0.1"
               min="0"
               name="issued"
@@ -103,7 +103,7 @@ export class PointSheetItem extends Component {
               onBlur={this.props.onItemBlur}
             />
             <Input
-              type='number'
+              type='tel'
               step="0.01"
               min="0"
               name='returned'
