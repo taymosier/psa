@@ -44,10 +44,6 @@
   font-weight: 700;
 }
 
-.inventoryInfoLabelCntr {
-
-}
-
 .emailModal {
   position: fixed;
   top: 40vh;
@@ -108,13 +104,14 @@
 .inventoryInfoLabelCntr label{
   margin: 0 15px 0 35px;
   padding: 10px 0px 10px 5px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
-  min-height: 80px;
+  min-height: 60px;
   min-width: 140px;
   max-width: 185px;
   letter-spacing: 2px;
   color: mintcream;
+  line-height: 1.2;
 }
 
 .inventoryInfoLabelCntr input{
@@ -131,7 +128,6 @@
 .form-control {
   margin: 10px 0 0 0;
   padding: 2px 0px 2px 10px;
-  min-height: 55px;
 }
 
 
@@ -207,13 +203,13 @@
 }
 
 .inputForm .form-group {
-  min-height: 7.5vh;
+  min-height: 60px;
   background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
   box-shadow: 0 3px 10px 1px;
 }
 
 .inputForm .form-group .row {
-  min-height: 70px;
+  min-height: 60px;
   max-height: auto
 }
 

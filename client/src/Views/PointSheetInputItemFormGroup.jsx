@@ -29,10 +29,10 @@ setValue(e){
     return(
       <FormGroup>
         <Row>
-          <Col className={"inventoryInfoLabelCntr"} xl="4" lg="4" md="4" sm={{ size: 5, offset: 1}} xs={{ size: 7, offset: 0}}>
+          <Col className={"inventoryInfoLabelCntr"} xl="4" lg="4" md="4" sm={{ size: 5, offset: 1}} xs={{ size: 6, offset: 0}}>
             <Label>{this.state.name}</Label>
           </Col>
-            <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 8}} xs={{ size: 4, offset: 0}}>
+            <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 8}} xs={{ size: 5, offset: 0}}>
               <Input name={this.state.name} src="0" value={this.state.value} onChange={this.setValue} handleChange={this.handleChange} ></Input>
           </Col>
         </Row>
