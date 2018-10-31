@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+button:focus {
+  outline: 0;
+}
+
 .appContainer {
   min-width: 100vw;
   min-height: 100vh;
