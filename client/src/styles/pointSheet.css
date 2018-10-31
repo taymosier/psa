@@ -3,12 +3,14 @@
   color: mintcream;
   border-radius: 7.5%;
   min-width: 40vw;
-  min-height: 75px;
+  min-height: 30px;
+  max-height: 50px;
   padding: 5px 0 0 0;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 300;
   border: none;
   letter-spacing: 3px;
+  -webkit-box-shadow: 0px 1px 12.5px 2px black;
   box-shadow: 0px 1px 12.5px 2px black;
 }
 
@@ -22,12 +24,14 @@
   color: mintcream;
   border-radius: 7.5%;
   min-width: 40vw;
-  min-height: 75px;
+  min-height: 50px;
+  max-height: 50px;
   padding: 5px 0 0 0;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 300;
   border: none;
   letter-spacing: 3px;
+  -webkit-box-shadow: 0px 1px 12.5px 2px black;
   box-shadow: 0px 1px 12.5px 2px black;
 }
 
@@ -261,12 +265,15 @@
 
 .searchFltCntr  {
   min-width: 100vw;
-  min-height: 80px;
+  min-height: 60px;
   position: fixed !important;
   background: white;
   z-index: 10000;
-  top: 175px;
+  top: 150px;
+  -webkit-box-shadow: 0 5px 10px 1.5px;
   box-shadow: 0 5px 10px 1.5px;
+  background: -webkit-linear-gradient(345deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
+  background: -o-linear-gradient(345deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
   background: linear-gradient(105deg, #69768A 12.5%, #D1CDD8 85%, #69768A 98% );
 }
 
