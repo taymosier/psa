@@ -79,7 +79,15 @@ export class PointSheetInput extends Component {
     let temp;
     let iterator = 0;
     keys.map(key => {
-      temp = <PointSheetInputItemFormGroup name={`${key}`} src={`${iterator}`} value={this.state.info[`${key}`]} setNewValue={this.setNewValue} handleChange={this.handelChange} />
+      temp =
+        <PointSheetInputItemFormGroup
+          name={`${key}`} src={`${iterator}`} 
+          value={this.state.info[`${key}`]}
+          onItemFocus={this.props.onItemFocus}
+          onItemBlur={this.props.onItemBlur}
+          setNewValue={this.setNewValue}
+          handleChange={this.handelChange}
+        />
       formGroups.push(temp);
       iterator++;
     });

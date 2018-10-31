@@ -23,7 +23,9 @@ export class PointSheet extends Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.handleConfirmation = this.handleConfirmation.bind(this);
     this.setPointSheetEmailState = this.setPointSheetEmailState.bind(this)
-    this.closeModal = this.closeModal.bind(this)
+    this.closeModal = this.closeModal.bind(this);
+    this.onItemFocus = this.onItemFocus.bind(this);
+    this.onItemBlur = this.onItemBlur.bind(this);
 
     this.state = {
       activeTab: '1',
@@ -32,7 +34,8 @@ export class PointSheet extends Component {
       "_id": this.props.data["_id"],
       date: this.props.data["date"],
       email: '',
-      toggleEmailModal: false
+      toggleEmailModal: false,
+      itemFocused: false
     };
 
   }
@@ -136,10 +139,26 @@ export class PointSheet extends Component {
     });
   }
 
+  onItemFocus(){
+    console.log('item focused')
+    this.setState({
+      itemFocused: true,
+    });
+  }
+
+  onItemBlur(){
+    console.log('item focused')
+    this.setState({
+      itemFocused: false,
+    });
+  }
+
   render(){
     return(
       <div className="pointSheet">
-        <Nav className={"pointSheetNav"} tabs>
+      { this.state.itemFocused
+        ? null
+        : <Nav className={"pointSheetNav"} tabs>
           <NavItem className={"deleteNavItem"}>
             <Button onClick={this.handleDelete}>Delete</Button>
           </NavItem>
@@ -173,6 +192,7 @@ export class PointSheet extends Component {
             </NavLink>
           </NavItem>
         </Nav>
+      }
         <EmailModal
           className={"emailModal"}
           toggle={this.state.toggleEmailModal}
@@ -187,6 +207,8 @@ export class PointSheet extends Component {
                 handleInputChange={this.handleInputChange}
                 info={this.props.data.info}
                 setParentComponentEmailState={this.setPointSheetEmailState}
+                onItemFocus={this.onItemFocus}
+                onItemBlur={this.onItemBlur}
               />
             </Col>
           </Row>
@@ -194,7 +216,13 @@ export class PointSheet extends Component {
         <TabPane tabId="2">
           <Row>
             <Col sm="6">
-              <PointSheetPoint handlePointChange={this.handlePointChange} inventory={this.props.data.inventory}/>
+              <PointSheetPoint
+              handlePointChange={this.handlePointChange}
+              inventory={this.props.data.inventory}
+              onItemFocus={this.onItemFocus}
+              onItemBlur={this.onItemBlur}
+              itemFocused={this.state.itemFocused}
+              />
             </Col>
           </Row>
         </TabPane>

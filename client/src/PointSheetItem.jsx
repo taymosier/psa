@@ -97,6 +97,8 @@ export class PointSheetItem extends Component {
               value={this.state.quantity.issued}
               onChange={this.handleAmountIssuedChanged}
               onBlur={this.formatIssuedInputValue}
+              onFocus={this.props.onItemFocus}
+              onBlur={this.props.onItemBlur}
             />
             <Input
               type='number'
@@ -106,6 +108,8 @@ export class PointSheetItem extends Component {
               value={this.state.quantity.returned}
               onChange={this.handleAmountReturnedChanged}
               onBlur={this.formatReturnedInputValue}
+              onFocus={this.props.onItemFocus}
+              onBlur={this.props.onItemBlur}
             />
           </Col>
         </Row>

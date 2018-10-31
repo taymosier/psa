@@ -33,7 +33,15 @@ setValue(e){
             <Label>{this.state.name}</Label>
           </Col>
             <Col xl="4" lg="4" md="4" sm={{ size: 3, offset: 8}} xs={{ size: 5, offset: 0}}>
-              <Input name={this.state.name} src="0" value={this.state.value} onChange={this.setValue} handleChange={this.handleChange} ></Input>
+              <Input
+                name={this.state.name}
+                src="0"
+                value={this.state.value}
+                onFocus={this.props.onItemFocus}
+                onChange={this.setValue}
+                handleChange={this.handleChange}
+                onItemBlur={this.props.onItemBlur}
+              ></Input>
           </Col>
         </Row>
       </FormGroup>

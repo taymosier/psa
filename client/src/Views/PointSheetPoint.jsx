@@ -63,10 +63,13 @@ export class PointSheetPoint extends Component {
 
     return(
       <div className="pointSheetContainer">
-        <SearchFilter handleSearch={this.handleSearch}/>
+        {this.props.itemFocused
+          ? null
+          : <SearchFilter handleSearch={this.handleSearch}/>
+        }
         {this.state.inventory !== ''
           ? <Form className={'inventoryForm'}>
-              <PointSheetInventoryList inventory={inventoryCopy} setPointSheet={this.setPointSheet}/>
+              <PointSheetInventoryList inventory={inventoryCopy} onItemFocus={this.props.onItemFocus} onItemBlur={this.props.onItemBlur} setPointSheet={this.setPointSheet}/>
             </Form>
           : null
         }

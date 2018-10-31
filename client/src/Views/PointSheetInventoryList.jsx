@@ -47,6 +47,8 @@ export class PointSheetInventoryList extends Component {
         name={item.name}
         handleItemChange={this.handleItemChange}
         item={item}
+        onItemFocus={this.props.onItemFocus}
+        onItemBlur={this.props.onItemBlur}
       />
     )
     return(inventoryList);
