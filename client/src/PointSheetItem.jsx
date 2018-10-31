@@ -91,6 +91,8 @@ export class PointSheetItem extends Component {
             <Label for={this.state.name} className={labelClass}>{this.state.name}</Label>
             <Input
               type='number'
+              step="0.1"
+              min="0"
               name="issued"
               id={amountIssued}
               placeholder="issued"
@@ -102,6 +104,8 @@ export class PointSheetItem extends Component {
             />
             <Input
               type='number'
+              step="0.01"
+              min="0"
               name='returned'
               id={amountReturned}
               placeholder="returned"
