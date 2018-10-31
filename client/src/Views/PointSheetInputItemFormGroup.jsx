@@ -40,7 +40,7 @@ setValue(e){
                 onFocus={this.props.onItemFocus}
                 onChange={this.setValue}
                 handleChange={this.handleChange}
-                onItemBlur={this.props.onItemBlur}
+                onBlur={this.props.onItemBlur}
               ></Input>
           </Col>
         </Row>
