@@ -27,6 +27,7 @@ export class EmailInput extends Component {
         name={"emailAddressInput"}
         value={this.state.email}
         onChange={this.setValue}
+        placeholder={"Or enter email manually"}
       ></Input>
     );
   }

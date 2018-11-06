@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { PointSheetList } from './PointSheetList';
 import { PointSheet } from './PointSheet';
+import { DefaultEmailList } from './DefaultEmailList';
 import { Button } from 'reactstrap';
 import {default_info} from './default_info';
 import {default_inv} from './default_inventory';
@@ -15,11 +16,14 @@ class Home extends Component {
     super(props);
     this.state = {
       modal: false,
+      defaultEmails: false,
       selectedDocument: '',
       data: '',
       dataLoaded: false
     };
     this.toggle = this.toggle.bind(this);
+    this.toggleDefaultEmailsModal = this.toggleDefaultEmailsModal.bind(this);
+
     this.passSelectedDocument = this.passSelectedDocument.bind(this);
     this.getSelectedDocument = this.getSelectedDocument.bind(this);
     this.getNewPointSheet = this.getNewPointSheet.bind(this);
@@ -68,6 +72,12 @@ class Home extends Component {
     });
   }
 
+  toggleDefaultEmailsModal() {
+    this.setState({
+      defaultEmails: !this.state.defaultEmails
+    });
+  }
+
   passSelectedDocument(selectedDocument){
     this.setState({
       selectedDocument: selectedDocument
@@ -109,12 +119,30 @@ class Home extends Component {
           <Button size="lg" className={"newPointSheetBtn"} onClick={this.getNewPointSheet}>
             New Point Sheet
           </Button>
-          <Button className={"pointSheetListBtn"} size="lg" onClick={this.toggle}>Point Sheet List</Button>
+          <Button
+            className={"pointSheetListBtn"}
+            size="lg"
+            onClick={this.toggle}
+          >
+            Point Sheet List
+          </Button>
           <PointSheetList
             className={"pointSheetList"}
             passSelectedDocument={this.passSelectedDocument}
             isOpen={this.state.modal}
             toggle={this.toggle}
+          />
+          <Button
+            className={"defaultEmailsListBtn"}
+            size="lg"
+            onClick={this.toggleDefaultEmailsModal}
+          >
+            Add/Remove Default Emails
+          </Button>
+          <DefaultEmailList
+            className={"defaultEmailsList"}
+            isOpen={this.state.defaultEmails}
+            toggle={this.toggleDefaultEmailsModal}
           />
         </div>
       }

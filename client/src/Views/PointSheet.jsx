@@ -52,6 +52,7 @@ export class PointSheet extends Component {
 
   componentDidUpdate(){
     if(this.state.email !== ''){
+      console.log('handleSubmit() called')
       this.handleSubmit();
     }
   }

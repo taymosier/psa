@@ -18,6 +18,7 @@ print(email)
 wb = openpyxl.load_workbook('GCC Point Sheet Template 2015.06.19.xlsx')
 inputSheet = wb['Input']
 pointSheet = wb['Point']
+fileSaved = False
 
 try:
     writePointDataToExcel(alcohol, pointSheet)
@@ -36,15 +37,18 @@ print('info written')
 
 try:
     wb.save('test.xlsx')
+    fileSaved = True
 except:
     print('Failed to save spreadsheet')
 
-try:
-    getEmailInformation('taymosier@gmail.com', 'W1nter!!!!', email, 'Dynamic Email Test', 'test.xlsx')
-    print('info posted')
-except:
-    print('Email failed to send')
-
+if fileSaved == True:
+    try:
+        getEmailInformation('taymosier@gmail.com', 'W1nter!!!!', email, 'Dynamic Email Test', 'test.xlsx')
+        print('Email sent.')
+    except:
+        print('Email failed to send')
+elif fileSaved == False:
+    print('New spreadsheet was not saved. Email not sent.')
 
 
 # try:

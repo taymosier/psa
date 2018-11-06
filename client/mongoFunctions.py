@@ -115,13 +115,23 @@ def addPostToMongoDB(database, collection, data):
     print('Collection found.')
     print('Generating post.')
 
-    post = formatPostData(data)
-    print('Post generated.')
-    try:
-        collection_instance.insert_one(post)
-        print('Post inserted to database ' + database + ' in collection ' + collection + '.')
-    except:
-        print('Failed to post data to database.')
+
+    if(collection == "inventory"):
+        try:
+            post = formatPostData(data)
+            print('Post generated.')
+        except:
+            print('instantiating post variable failed')
+        try:
+            collection_instance.insert_one(post)
+            print('Post inserted to database ' + database + ' in collection ' + collection + '.')
+        except:
+            print('Failed to post data to database.')
+    elif (collection == "emails"):
+        try:
+            collection_instance.insert_one(data)
+        except:
+            print('Failed trying to insert post to emails collection.')
 
 
 def updateExistingPost(database, collection, data):

@@ -6,7 +6,7 @@ export const default_info = {
   "Host": "n",
   "Sales Tax": "7%",
   "Service Charge": "21%",
-  "Cash Collected": "$1400.00",
+  "Cash Collected": "$0.00",
   "Call Liquor Price": "$6.00",
   "Premium Liquor Price": "$7.00",
   "Top Liquor Price": "$9.00",
