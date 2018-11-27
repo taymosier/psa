@@ -16,7 +16,7 @@ class App extends Component {
     const App = () => (
       <div className={"appContainer"}>
         <Switch>
-          <Route exact path='./psa' component={Home}/>
+          <Route exact path='./' component={Home}/>
         </Switch>
       </div>
     )
