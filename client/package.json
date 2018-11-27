@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://taylormosier.com",
+  "homepage": "https://taylormosier.com/psa",
   "dependencies": {
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
