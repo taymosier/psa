@@ -52,7 +52,7 @@ class Home extends Component {
     let selectedDocument = this.state.selectedDocument;
     console.log('selectedDocument:')
     console.log(this.state.selectedDocument)
-    fetch('./psa/requestDocument', {
+    fetch('/requestDocument', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'

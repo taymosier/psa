@@ -89,7 +89,7 @@ export class PointSheet extends Component {
 
   sendPointSheet = () => {
     let data = [this.state.info, this.state.inventory, this.state.email]
-    fetch('./psa/submitInventory', {
+    fetch('./submitInventory', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -101,7 +101,7 @@ export class PointSheet extends Component {
 
   handleSave = () => {
     let data = [this.state.info, this.state.inventory, this.state["_id"], this.state.date]
-    fetch('./psa/savePointsheet', {
+    fetch('./savePointsheet', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ export class PointSheet extends Component {
     let data = [this.state["_id"]];
     console.log('ID being passed in delete request')
     console.log(data)
-    fetch('./psa/deletePointsheet', {
+    fetch('./deletePointsheet', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

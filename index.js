@@ -42,7 +42,7 @@ app.get('/api/getlist', (req,res) => {
 });
 
 
-app.get('/psa/getDefaultEmails', (req, res) => {
+app.get('/getDefaultEmails', (req, res) => {
   let emails = [];
   let url = "mongodb://localhost:27017/";
   MongoClient.connect(url, function(err, db) {
@@ -78,7 +78,7 @@ app.get('/psa/getDefaultEmails', (req, res) => {
 // that posts the inputted information to a mongoDB
 // database, then writes the data to an excel file,
 // and emails the generated spreadsheet
-app.post('/psa/submitInventory', (req,res) => {
+app.post('/submitInventory', (req,res) => {
   console.log('submit request received')
   let data = logData(req.body);
   console.log(data)
@@ -88,7 +88,7 @@ app.post('/psa/submitInventory', (req,res) => {
 
 // On save inventory request, runs a python script that
 // saves the inputted data to the mongoDB database
-app.post('/psa/savePointsheet', (req,res) => {
+app.post('/savePointsheet', (req,res) => {
   console.log('save request received')
   let data = req.body;
   data.push("inventory")
@@ -98,7 +98,7 @@ app.post('/psa/savePointsheet', (req,res) => {
 });
 
 
-app.post('/psa/deletePointsheet', (req,res) => {
+app.post('/deletePointsheet', (req,res) => {
   console.log('delete request received')
   let data = req.body;
   data.push("inventory")
@@ -107,7 +107,7 @@ app.post('/psa/deletePointsheet', (req,res) => {
   spawnPythonProcess('delete', data);
 });
 
-app.post('/psa/deleteDefaultEmail', (req,res) => {
+app.post('/deleteDefaultEmail', (req,res) => {
   console.log('delete email request received')
   let data = req.body;
   data.push("emails")
@@ -115,7 +115,7 @@ app.post('/psa/deleteDefaultEmail', (req,res) => {
   spawnPythonProcess('delete_email', data);
 });
 
-app.post('/psa/submitNewDefaultEmail', (req,res) => {
+app.post('/submitNewDefaultEmail', (req,res) => {
   console.log('delete email request received')
   let data = req.body;
   data.push("emails")
@@ -227,7 +227,7 @@ function printDataToConsole(childProcess, data){
 
 // Upon receiving post request, submits
 // data to mongoDB
-app.post('/psa/requestDocument', (req,res) => {
+app.post('/requestDocument', (req,res) => {
   let selectedDocumentDate = req.body;
   console.log('Express data received')
   console.log(req.body[0])
@@ -266,7 +266,7 @@ app.post('/psa/requestDocument', (req,res) => {
 
 // Listens for initial document load request, then sends back the five most
 // recent spreadsheets
-app.get('/psa/initialDocLoad', (req, res) => {
+app.get('/initialDocLoad', (req, res) => {
   let events = [];
   let url = "mongodb://localhost:27017/";
   MongoClient.connect(url, function(err, db) {
@@ -299,7 +299,7 @@ app.get('/psa/initialDocLoad', (req, res) => {
 })
 
 //Listens for request of homepage url
-app.get('/psa/*', (req,res) =>{
+app.get('/*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 

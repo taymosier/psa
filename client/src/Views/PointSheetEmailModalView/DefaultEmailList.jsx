@@ -21,7 +21,7 @@ export class DefaultEmailList extends Component {
 
   componentDidMount(){
     console.log('fetching default emails')
-    fetch('/psa/getDefaultEmails', {method: "GET"})
+    fetch('/getDefaultEmails', {method: "GET"})
     .then(res => {
       if (res.ok) {
         return res.json();
@@ -58,7 +58,7 @@ export class DefaultEmailList extends Component {
     let selectedEmail = this.state.selectedEmail;
     console.log('selectedEmail:')
     console.log(this.state.selectedEmail)
-    fetch('./psa/deleteDefaultEmail', {
+    fetch('./deleteDefaultEmail', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -76,7 +76,7 @@ export class DefaultEmailList extends Component {
 
   submitNewEmail(newEmail){
     console.log("You got mail!! " + newEmail)
-    fetch('./psa/submitNewDefaultEmail', {
+    fetch('./submitNewDefaultEmail', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'

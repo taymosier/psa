@@ -22,7 +22,7 @@ export class PointSheetList extends Component {
 //Sends a fetch GET request, then updates the component state according
 //to the data received
   getDocumentsByDate = () => {
-    fetch('/psa/initialDocLoad', {method: "GET"})
+    fetch('/initialDocLoad', {method: "GET"})
     .then(res => {
       if (res.ok) {
         return res.json();
