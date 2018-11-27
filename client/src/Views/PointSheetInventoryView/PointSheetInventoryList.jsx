@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { default_inv } from  './default_inventory';
-import { PointSheetItem } from '../PointSheetItem';
+import { default_inv } from  '../../defaults/default_inventory';
+import { PointSheetItem } from './PointSheetItem';
 export class PointSheetInventoryList extends Component {
   constructor(props){
     super(props);

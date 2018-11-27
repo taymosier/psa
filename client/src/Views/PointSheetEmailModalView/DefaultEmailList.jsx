@@ -21,7 +21,7 @@ export class DefaultEmailList extends Component {
 
   componentDidMount(){
     console.log('fetching default emails')
-    fetch('/getDefaultEmails', {method: "GET"})
+    fetch('/psa/getDefaultEmails', {method: "GET"})
     .then(res => {
       if (res.ok) {
         return res.json();
@@ -58,7 +58,7 @@ export class DefaultEmailList extends Component {
     let selectedEmail = this.state.selectedEmail;
     console.log('selectedEmail:')
     console.log(this.state.selectedEmail)
-    fetch('./deleteDefaultEmail', {
+    fetch('./psa/deleteDefaultEmail', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -76,7 +76,7 @@ export class DefaultEmailList extends Component {
 
   submitNewEmail(newEmail){
     console.log("You got mail!! " + newEmail)
-    fetch('./submitNewDefaultEmail', {
+    fetch('./psa/submitNewDefaultEmail', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -96,10 +96,6 @@ export class DefaultEmailList extends Component {
   render(){
     return(
       <div>
-        {this.state.emails !== ''
-          ? <div>Emails Found</div>
-          : <div>Empty email List</div>
-        }
         <Modal
           isOpen={this.props.isOpen}
           toggle={this.props.toggle}

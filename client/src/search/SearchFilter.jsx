@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Col, Row, FormGroup, Label, Input} from 'reactstrap';
 
-import './styles/pointSheet.css';
+import '../styles/pointSheet.css';
 
 
 export class SearchFilter extends Component {

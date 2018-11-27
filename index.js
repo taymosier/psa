@@ -42,7 +42,7 @@ app.get('/api/getlist', (req,res) => {
 });
 
 
-app.get('/getDefaultEmails', (req, res) => {
+app.get('/psa/getDefaultEmails', (req, res) => {
   let emails = [];
   let url = "mongodb://localhost:27017/";
   MongoClient.connect(url, function(err, db) {
@@ -78,7 +78,7 @@ app.get('/getDefaultEmails', (req, res) => {
 // that posts the inputted information to a mongoDB
 // database, then writes the data to an excel file,
 // and emails the generated spreadsheet
-app.post('/submitInventory', (req,res) => {
+app.post('/psa/submitInventory', (req,res) => {
   console.log('submit request received')
   let data = logData(req.body);
   console.log(data)
@@ -88,7 +88,7 @@ app.post('/submitInventory', (req,res) => {
 
 // On save inventory request, runs a python script that
 // saves the inputted data to the mongoDB database
-app.post('/savePointsheet', (req,res) => {
+app.post('/psa/savePointsheet', (req,res) => {
   console.log('save request received')
   let data = req.body;
   data.push("inventory")
@@ -98,7 +98,7 @@ app.post('/savePointsheet', (req,res) => {
 });
 
 
-app.post('/deletePointsheet', (req,res) => {
+app.post('/psa/deletePointsheet', (req,res) => {
   console.log('delete request received')
   let data = req.body;
   data.push("inventory")
@@ -107,7 +107,7 @@ app.post('/deletePointsheet', (req,res) => {
   spawnPythonProcess('delete', data);
 });
 
-app.post('/deleteDefaultEmail', (req,res) => {
+app.post('/psa/deleteDefaultEmail', (req,res) => {
   console.log('delete email request received')
   let data = req.body;
   data.push("emails")
@@ -115,7 +115,7 @@ app.post('/deleteDefaultEmail', (req,res) => {
   spawnPythonProcess('delete_email', data);
 });
 
-app.post('/submitNewDefaultEmail', (req,res) => {
+app.post('/psa/submitNewDefaultEmail', (req,res) => {
   console.log('delete email request received')
   let data = req.body;
   data.push("emails")
@@ -163,7 +163,7 @@ function savePointSheetToDB(spawn, data){
   console.log('Data being saved')
   console.log(data)
   let pythonProcess = spawn('python', ['savePointSheet.py', JSON.stringify(data)], {
-    'cwd': './client'
+    'cwd': './client/python'
   });
   printDataToConsole(pythonProcess, data)
 }
@@ -172,7 +172,7 @@ function saveDataToDB(spawn, data){
   console.log('Saving email');
   console.log(data)
   let pythonProcess = spawn('python', ['saveData.py', JSON.stringify(data)], {
-    'cwd': './client'
+    'cwd': './client/python'
   });
   printDataToConsole(pythonProcess, data)
 }
@@ -184,7 +184,7 @@ function writeDataToDBAndEmail(spawn, data, ){
   try{
     console.log('Data being written')
     let pythonProcess = spawn('python', ['pointsheet.py', JSON.stringify(data)], {
-      'cwd': './client'
+      'cwd': './client/python'
     });
     printDataToConsole(pythonProcess, data)
   } catch(e){
@@ -199,7 +199,7 @@ function deleteDocumentFromDB(spawn, data, database){
   try{
     console.log('Data being written')
     let pythonProcess = spawn('python', ['deleteDocument.py', JSON.stringify(data)], {
-      'cwd': './client'
+      'cwd': './client/python'
     });
     let result = printDataToConsole(pythonProcess, data)
     if(result){
@@ -227,7 +227,7 @@ function printDataToConsole(childProcess, data){
 
 // Upon receiving post request, submits
 // data to mongoDB
-app.post('/requestDocument', (req,res) => {
+app.post('/psa/requestDocument', (req,res) => {
   let selectedDocumentDate = req.body;
   console.log('Express data received')
   console.log(req.body[0])
@@ -266,7 +266,7 @@ app.post('/requestDocument', (req,res) => {
 
 // Listens for initial document load request, then sends back the five most
 // recent spreadsheets
-app.get('/initialDocLoad', (req, res) => {
+app.get('/psa/initialDocLoad', (req, res) => {
   let events = [];
   let url = "mongodb://localhost:27017/";
   MongoClient.connect(url, function(err, db) {
@@ -299,7 +299,7 @@ app.get('/initialDocLoad', (req, res) => {
 })
 
 //Listens for request of homepage url
-app.get('/*', (req,res) =>{
+app.get('/psa/*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 

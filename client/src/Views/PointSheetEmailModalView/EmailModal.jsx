@@ -24,7 +24,7 @@ export class EmailModal extends Component {
 
   componentDidMount(){
     console.log('fetching default emails')
-    fetch('/getDefaultEmails', {method: "GET"})
+    fetch('/psa/getDefaultEmails', {method: "GET"})
     .then(res => {
       if (res.ok) {
         return res.json();

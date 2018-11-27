@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { inventory } from '../alcohol';
-import { PointSheetItem } from '../PointSheetItem';
+import { inventory } from '../../defaults/alcohol';
+import { PointSheetItem } from './PointSheetItem';
 import { PointSheetInventoryList } from './PointSheetInventoryList';
-import { SearchFilter } from '../SearchFilter';
+import { SearchFilter } from '../../search/SearchFilter';
 import { Button, Form } from 'reactstrap';
 
-import '../styles/pointSheet.css';
+import '../../styles/pointSheet.css';
 
 // TODO LATER
 // Add validation for inputs

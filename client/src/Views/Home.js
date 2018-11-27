@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { PointSheetList } from './PointSheetList';
+import { PointSheetList } from './PointSheetListSelectView/PointSheetList';
 import { PointSheet } from './PointSheet';
-import { DefaultEmailList } from './DefaultEmailList';
+import { DefaultEmailList } from './PointSheetEmailModalView/DefaultEmailList';
 import { Button } from 'reactstrap';
-import {default_info} from './default_info';
-import {default_inv} from './default_inventory';
+import {default_info} from '../defaults/default_info';
+import {default_inv} from '../defaults/default_inventory';
 
 import '../styles/home.css';
 
@@ -52,7 +52,7 @@ class Home extends Component {
     let selectedDocument = this.state.selectedDocument;
     console.log('selectedDocument:')
     console.log(this.state.selectedDocument)
-    fetch('./requestDocument', {
+    fetch('./psa/requestDocument', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -95,7 +95,6 @@ class Home extends Component {
     this.setState({
       data: {
         info: data
-        // inventory: this.state.data.inventory
       }
     })
   }
@@ -103,7 +102,6 @@ class Home extends Component {
   updateInventory(data){
     this.setState({
       data: {
-        // info: this.state.data.info,
         inventory: data
       }
     })

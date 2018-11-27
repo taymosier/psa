@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'reactstrap';
 import { PointSheetInputItemFormGroup } from './PointSheetInputItemFormGroup';
-import {default_info} from './default_info';
+import {default_info} from '../../defaults/default_info';
 
 // TODO
 // Add onChange handler for Cash Collected input
@@ -81,7 +81,7 @@ export class PointSheetInput extends Component {
     keys.map(key => {
       temp =
         <PointSheetInputItemFormGroup
-          name={`${key}`} src={`${iterator}`} 
+          name={`${key}`} src={`${iterator}`}
           value={this.state.info[`${key}`]}
           onItemFocus={this.props.onItemFocus}
           onItemBlur={this.props.onItemBlur}

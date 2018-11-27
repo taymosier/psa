@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/pointSheet.css';
+import '../../styles/pointSheet.css';
 import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 

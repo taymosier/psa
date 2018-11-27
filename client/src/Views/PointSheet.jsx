@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { PointSheetPoint } from './PointSheetPoint';
-import { PointSheetInput } from './PointSheetInput';
-import { EmailModal } from './EmailModal'
-import {default_info} from './default_info';
-import {default_inv} from './default_inventory';
+import { PointSheetPoint } from './PointSheetInventoryView/PointSheetPoint';
+import { PointSheetInput } from './PointSheetInfoView/PointSheetInput';
+import { EmailModal } from './PointSheetEmailModalView/EmailModal'
+import {default_info} from '../defaults/default_info';
+import {default_inv} from '../defaults/default_inventory';
 
 require('../styles/pointSheet.css')
-
-
 
 
 export class PointSheet extends Component {
@@ -91,7 +89,7 @@ export class PointSheet extends Component {
 
   sendPointSheet = () => {
     let data = [this.state.info, this.state.inventory, this.state.email]
-    fetch('./submitInventory', {
+    fetch('./psa/submitInventory', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -103,7 +101,7 @@ export class PointSheet extends Component {
 
   handleSave = () => {
     let data = [this.state.info, this.state.inventory, this.state["_id"], this.state.date]
-    fetch('./savePointsheet', {
+    fetch('./psa/savePointsheet', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -117,7 +115,7 @@ export class PointSheet extends Component {
     let data = [this.state["_id"]];
     console.log('ID being passed in delete request')
     console.log(data)
-    fetch('./deletePointsheet', {
+    fetch('./psa/deletePointsheet', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
