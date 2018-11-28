@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './Views/Home';
+import Psa from './Views/Psa';
 import PointSheetPoint from './Views/PointSheetInventoryView/PointSheetPoint';
 import PointSheetInput from './Views/PointSheetInfoView/PointSheetInput';
 import PointSheet from './Views/PointSheet';
@@ -17,6 +18,7 @@ class App extends Component {
       <div className={"appContainer"}>
         <Switch>
           <Route exact path='/' component={Home}/>
+          <Route exact path='/psa' component={Psa}/>
         </Switch>
       </div>
     )
