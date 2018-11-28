@@ -109,7 +109,7 @@ class Home extends Component {
 
   render() {
     return (
-    <div className="App">
+    <div className="Home">
       {this.state.data !== ''
        ?<div><PointSheet className={"pointsheet"} data={this.state.data} clearData={this.clearData} updateInfo={this.updateInfo} updateInventory={this.updateInventory}/></div>
        :<div className={"homeOptionsView"}>
