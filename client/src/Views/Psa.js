@@ -21,6 +21,7 @@ class Psa extends Component {
       data: '',
       dataLoaded: false
     };
+  }
 
   render() {
     return (
