@@ -18,6 +18,7 @@ class App extends Component {
       <div className={"appContainer"}>
         <Switch>
           <Route exact path='/' component={Home}/>
+          <Route exact path='/psa' component={Psa}/>
         </Switch>
       </div>
     )
