@@ -303,6 +303,10 @@ app.get('/*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
+app.get('/psa/*', (req,res) =>{
+    res.sendFile(path.join(../+ 'test' +'/client/build/index.html'));
+});
+
 app.listen(5000, "127.0.0.1");
 
 console.log('App is listening');
