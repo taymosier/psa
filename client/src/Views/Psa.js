@@ -26,7 +26,7 @@ class Psa extends Component {
   render() {
     return (
     <div className="Psa">
-      <div>This is the Point Sheet Application</div>
+      <div>This is the PSA component. Congratulations</div>
     </div>
     );
   }
