@@ -43,7 +43,7 @@ except:
 
 if fileSaved == True:
     try:
-        getEmailInformation('taymosier@gmail.com', 'W1nter!!!!', email, 'Dynamic Email Test', 'test.xlsx')
+        getEmailInformation('gccpointsheets@gmail.com', 'H3nD4wg!!', email, 'Dynamic Email Test', 'test.xlsx')
         print('Email sent.')
     except:
         print('Email failed to send')

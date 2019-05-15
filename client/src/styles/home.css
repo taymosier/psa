@@ -1,0 +1,74 @@
+.homeOptionsView {
+  min-height: 100vh;
+}
+
+.homeHeader {
+  font-size: 34px;
+  color: mintcream;
+  letter-spacing: 1.2px;
+  font-weight: 300;
+  width: 70vw;
+  min-width:  70vw;
+  max-width: 70vw;
+  text-align: center;
+  margin: 10vh 15vw 5vh 15vw;
+}
+
+.homeOptionsView button {
+  width: 80vw;
+  min-width: 80vw;
+  max-width:80vw;
+  margin: 2.5vh 9.5vw;
+}
+
+.homeOptionsView .newPointSheetBtn {
+  opacity: 0.9;
+  min-height: 20vh;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.homeOptionsView .pointSheetListBtn {
+  opacity: 0.9;
+  min-height: 20vh;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.pointSheetList {
+
+}
+
+.pointSheetList .modal {
+
+}
+
+.pointSheetList .modal-content {
+  background: lightslategrey;
+}
+
+.pointSheetList .modal-header {
+  color: mintcream;
+  font-size: 28px;
+  letter-spacing: 2.25px;
+  font-family: "Segoe UI"
+}
+
+.pointSheetList .modal-header h5{
+  color: mintcream;
+  font-size: 28px;
+  letter-spacing: 2.25px;
+  font-weight: 300;
+  font-family: "Segoe UI"
+}
+
+.pointSheetList .modal-header button span{
+  display: none;
+}
+
+.pointSheetList .modal-body {
+}
+
+.pointSheetList .modal-footer {
+  border: none;
+}
